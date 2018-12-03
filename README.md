@@ -1,5 +1,14 @@
 # HiCollegeReact
-HIQ hiq college
+
+## HIQ hiq college
+## What is React?  
+## Why React? 
+## JSX 
+## State, life cycle and events 
+## Handling data with props
+## Form, lists and conditional rendering 
+## Containers and functional components 
+
 
 ## Available Scripts
 
