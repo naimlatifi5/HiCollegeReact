@@ -1,6 +1,5 @@
 # HiCollegeReact
 
-## HIQ hiq college
 ## What is React?  
 ## Why React? 
 ## JSX 
