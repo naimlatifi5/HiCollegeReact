@@ -1,7 +1,7 @@
 # HiCollegeReact
 
 ## Agenda
-### What is React?  
+* ### What is React?  
 ### Why React? 
 ### JSX 
 ### State, life cycle and events 
