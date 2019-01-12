@@ -1,9 +1,10 @@
 import React from 'react'
-
-const Jsx = () => (
-  <div>
-    <h1>Hello Jsx - more example to come... </h1>
+class Jsx extends React.Component {
+  render() {
+    return <div>
+    <h1>Hello Jsx- more example to come...</h1>
   </div>
-)
+  }
+}
 
 export default Jsx

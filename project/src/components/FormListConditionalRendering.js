@@ -1,9 +1,13 @@
 import React from 'react'
 
-const FormListConditionalRendering = () => (
-  <div>
-    <h1>Form list conditional rendering - more example to come... </h1>
+class FormListConditionalRendering extends React.Component {
+  render() {
+    return <div>
+    <h1>Hello FormListConditionalRendering- more example to come...</h1>
   </div>
-)
+  }
+}
+
+
 
 export default FormListConditionalRendering
