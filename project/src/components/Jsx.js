@@ -14,8 +14,26 @@ const emp = <h1>Employee at {users.employee}</h1>
 function printUserNames(user) {
   return `${user.person1} ${user.person2}`
 }
+const objectResponse = {
+   succes: true
+}
+
+// example - if statement with jsx syntax
+let message = "";
+if(objectResponse.succes) {
+  message = (
+    <h1>Success</h1>
+  );
+  }else {
+    message = (
+      <h1>Error</h1>
+    )
+  }
+
+
 class Jsx extends React.Component {
   render() {
+    
     // jsx a javascript extension that allow as to write js code that looks like html 
     console.log("React object properties ", React);
     return (
@@ -37,7 +55,7 @@ class Jsx extends React.Component {
               )
             )
           }
-
+          <p>What is response: {message}</p>   
       </div>
     ) 
   }
