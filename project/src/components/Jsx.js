@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 
 const users = {
   person1: "Sara Holm",
@@ -31,7 +31,7 @@ if(objectResponse.succes) {
   }
 
 
-class Jsx extends React.Component {
+class Jsx extends Component {
   render() {
     
     // jsx a javascript extension that allow as to write js code that looks like html 
@@ -39,10 +39,10 @@ class Jsx extends React.Component {
     return (
       // jsx syntax and where javascript transpiles the code under the hood
       // attributes in jsx are named as camelCase i.e className,  onClick, onSubmit etc...
-      <div class="parent-tag">
+      <div className="parent-tag">
         <h1 className="heading" id={headingId}>Hello Jsx</h1> 
         <p style={paragraphStyle}>Users name are: {printUserNames(users)}</p>
-        <h2>{emp}</h2>
+        
           
           {
            //Jsx will transplate to this javascript code on runtime, if we do not want to use jsx as above we can then write pure js syntax as below
@@ -55,7 +55,8 @@ class Jsx extends React.Component {
               )
             )
           }
-          <p>What is response: {message}</p>   
+           What is response: {message}   
+          {emp}
       </div>
     ) 
   }

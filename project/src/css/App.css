@@ -31,4 +31,18 @@
   }
 }
 
+.box1,
+.box2 {
+  padding: 20px;
+  max-width: 200px;
+  display: inline-flex;
+  margin-right: 20px;
+}
+.box1 {
+  background-color: grey;
+}
+
+.box2 {
+  background-color: palevioletred;
+}
 

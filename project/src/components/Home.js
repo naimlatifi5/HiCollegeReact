@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { Component } from 'react'
 import logo from '../logo.svg';
 
-class Home extends React.Component {
+class Home extends Component {
   render() {
     return <div>
     <img src={logo} className="App-logo" alt="logo" />
