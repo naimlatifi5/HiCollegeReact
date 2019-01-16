@@ -3,7 +3,6 @@ import { Switch, Route } from 'react-router-dom'
 import Home from '../components/Home';
 import JSX from '../components/Jsx';
 import FormListConditionalRendering from '../components/FormListConditionalRendering';
-import Props from '../components/Components&Props';
 import ContainerComponents from '../components/ContainersComponents';
 import StateLifeCycleEvents from '../components/StateLifeCycleEvents';
 import ComponentsProps from '../components/Components&Props';
