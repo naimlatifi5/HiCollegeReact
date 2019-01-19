@@ -11,8 +11,8 @@ const Header = () => (
           <li><Link to='/components'>Components</Link></li>
           <li><Link to='/props'>Props</Link></li>
           <li><Link to='/formListConditionRendering'>Form List & conditional rendering</Link></li>
-          <li><Link to='/lifeCycleMethods'>Life Cycle Methods</Link></li>
           <li><Link to='/events'>Events</Link></li>
+          <li><Link to='/lifeCycleMethods'>Life Cycle Methods</Link></li>
           <li><Link to='/challenge'>Challenge</Link></li>
         </ul>
       </nav>

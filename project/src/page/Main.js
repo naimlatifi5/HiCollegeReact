@@ -22,8 +22,8 @@ const Main = () => (
       <Route path='/components' component={Components}/>
       <Route path='/props' component={Props}/>
       <Route path='/formListConditionRendering' component={FormListConditionalRendering}/>
-      <Route path='/lifeCycleMethods' component={LifeCycleMethods}/>
       <Route path='/events' component={Events}/>
+      <Route path='/lifeCycleMethods' component={LifeCycleMethods}/>
       <Route path='/challenge' component={Challenge}/>
     </Switch>
   </main>
