@@ -1,14 +1,14 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import Home from '../components/Home';
-import JSX from '../components/Jsx';
-import FormListConditionalRendering from '../components/FormListConditionalRendering';
-import LifeCycleMethods from '../components/LifeCycleMethods';
-import Components from '../components/Components';
-import Props from '../components/Props';
-import State from '../components/State';
-import Events from '../components/Events';
-import Challenge from '../components/Challenge';
+import JSX from '../components/JSX/Jsx';
+import FormListConditionalRendering from '../components/FormListConditionalRendering/Main';
+import LifeCycleMethods from '../components/LifeCycleMethods/LifeCycleMethods';
+import Components from '../components/Components/Main';
+import Props from '../components/Props/Main';
+import State from '../components/State/Main';
+import Events from '../components/Events/Main';
+import Challenge from '../components/Challenge/Main';
 
 
 // The Main component renders one of the three provided
