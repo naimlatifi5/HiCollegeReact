@@ -40,6 +40,7 @@ class Jsx extends Component {
     return (
       // jsx syntax and where javascript transpiles the code under the hood
       // attributes in jsx are named as camelCase i.e className,  onClick, onSubmit etc...
+      // it is important to wrapp elements within a div as main container in jsx
       <div className="parent-tag">
         <h1 className="heading" id={headingId}>Hello Jsx</h1> 
         <p style={paragraphStyle}>Users name are: {printUserNames(users)}</p>

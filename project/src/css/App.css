@@ -69,3 +69,14 @@
   color: black;
   text-align: center;
 }
+
+.divToggler {
+  width: 100px;
+  height: 100px;
+  background-color: grey;
+  color: black;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  cursor: pointer;
+}

@@ -1,10 +1,18 @@
 import React, {Component} from 'react'
-
+import EventHandling from './EventHandling'
+import DivToggler from './TogleDiv'
 class Events extends Component {
+  alertMe() {
+    alert("Hello Click event");
+  }
   render() {
-    return <div>
-    <h1>Hello Events- more example to come...</h1>
-  </div>
+    return( 
+      <div className="events">
+        <EventHandling/>
+        <hr/>
+        <DivToggler/>
+      </div>
+   )
   }
 }
 
