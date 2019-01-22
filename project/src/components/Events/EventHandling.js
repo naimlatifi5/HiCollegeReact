@@ -45,7 +45,8 @@ class EventHandling extends Component {
   render() {
 
     return( 
-      <div className="event-handling">
+      // if we do not want to use an extra duv as wraooer then we can use <React.fragment></React.fragment> eller <> </>
+      <>
         <h1>Hello Events in React</h1>
         {/* Complared to vanilla javascript events named in React are camelCase written i.e. onclick becomes onClick */}
         <button onClick={this.alertMe}>Click me</button>
@@ -102,7 +103,7 @@ class EventHandling extends Component {
           ... 
           ....
           */}
-      </div>
+      </>
    )
   }
 }
