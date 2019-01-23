@@ -80,3 +80,21 @@
   align-items:center;
   cursor: pointer;
 }
+
+.comment-form,
+.display-comments{
+  margin: 0 auto;
+}
+.comment-form {
+  margin: 50px auto;
+}
+.heading-author {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+.comment {
+  margin-top: 20px;
+}
+
+ 

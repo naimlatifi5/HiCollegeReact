@@ -1,11 +1,12 @@
 import React, {Component} from 'react'
-
-class Challenge extends Component {
+import Challenge from './AddComment'
+class MainChallenge extends Component {
   render() {
     return <div>
-    <h1>Hello Challenge- more example to come...</h1>
+    <h1>Comment App with React- Challenge</h1>
+     <Challenge></Challenge>
   </div>
   }
 }
 
-export default Challenge
+export default MainChallenge
