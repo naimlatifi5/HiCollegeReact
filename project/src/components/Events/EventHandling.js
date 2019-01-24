@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
- 
+
 class EventHandling extends Component {
   constructor(props) {
     super (props)
@@ -37,14 +37,14 @@ class EventHandling extends Component {
     this.setState ({
       reverseText: textValue.split("").reverse("").join("")
     })
-    
+
   }
   alertMe() {
     alert("Hello Click event");
   }
   render() {
 
-    return( 
+    return(
       // if we do not want to use an extra duv as wraooer then we can use <React.fragment></React.fragment> eller <> </>
       <>
         <h1>Hello Events in React</h1>
@@ -100,7 +100,7 @@ class EventHandling extends Component {
           onChange
           onInput
           onSubmit
-          ... 
+          ...
           ....
           */}
       </>
