@@ -24,14 +24,7 @@ class ParentComponent extends Component {
     console.log('Right place to load data from any endpoints i.e via axios');
     console.groupEnd();
 
-  }
-  handleParentClick = () => {
-    this.setState({
-      // changing state for count by increase 1 
-      count: this.state.count + 1
-    })
-  }
-  
+  } 
   shouldComponentUpdate() {
     console.group("======== SHOULD COMPONENT UPDATED ======")
     console.log("This decides whether components needs to be re-rendered or not")
@@ -80,17 +73,30 @@ class ParentComponent extends Component {
     // this FUNCTION IS DEPRICATED - UNSAFE_componentWillReciveProps. Use instead getDerivedStateFromProps
   }
 
+  componentWillUpdate(nextProps, nextState) {
+    console.group('componentWillUpdate');
+    console.log('get called on before every re-rendering');
+    console.groupEnd();
+  }
+
+  componentWillUnmount() {
+    
+  }
+
+  handleParentClick = () => {
+    this.setState({
+      // changing state for count by increase 1 
+      count: this.state.count + 1
+    })
+  }
+
   handleParentText = () => {
     this.setState({
       value: "You have clicked me!"
     })
   }
 
-  componentWillUpdate(nextProps, nextState) {
-    console.group('componentWillUpdate');
-    console.log('get called on before every re-rendering');
-    console.groupEnd();
-  }
+
   render() {
     return (
       <>

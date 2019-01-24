@@ -5,7 +5,7 @@ class ClassComponentWithProps extends Component {
     render () {
       const { name } = this.props; 
       const bodyComponentProps = this.props.children 
-      return <p> { name } {bodyComponentProps} </p>
+      return <p> { name } { bodyComponentProps } </p>
     }
   }
 
