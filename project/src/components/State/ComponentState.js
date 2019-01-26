@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-
+import ChildState from './ChildComponent'
 // state only can be used within class Component and cannot be used with function component
 // state in React are immutable- do not change directly but change should be made to the copy of the state.
 // state are kind of like props but state is private property of the component and is controlled only by that component.
@@ -11,14 +11,14 @@ class ComponentState extends Component {
     constructor (props) {
       super (props); // super is a must when using constructore - for more read about how works with Inheritance in OOP
       this.state = {
-          name: 'Naim'
+          name: 'Naim'  // accessing the state can be done with this.state.name
       }
     }
   render() {
     return <div>
-    <h1>Component with state</h1>
+    <h1>Component with state and child component</h1>
     <p>What is my name : {this.state.name}</p>
-
+    <ChildState name={this.state.name}></ChildState> 
   </div>
   }
 }

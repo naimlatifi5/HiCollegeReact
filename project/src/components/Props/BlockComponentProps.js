@@ -1,6 +1,7 @@
 import React from 'react'
 
   // components with props and ES6 function declaration
+  // props in functional components are recieved via props function arguments
   const BlockComponent = (props) => {
     console.log("Props component" , props)
     return (

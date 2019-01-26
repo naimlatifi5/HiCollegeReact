@@ -1,5 +1,10 @@
 import React from 'react'
 // list rendering 
+const numbers = [1,2,3,4,5];
+const items = numbers.map((item,i) => 
+  <span key={i}>{item * 2}</span>
+);
+
 function Comments (props) {
     const headertable = (
       <thead>
@@ -21,12 +26,17 @@ function Comments (props) {
     )
   
     return (
+        <>
         <table className="table table-hover">
           {headertable}
           <tbody>
           {bodytable}
           </tbody>
         </table>
+        <div>
+          {items}
+        </div>
+       </> 
     )
   }
 
