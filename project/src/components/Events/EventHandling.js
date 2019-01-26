@@ -9,11 +9,11 @@ class EventHandling extends Component {
        reverseText: '',
        onKeyUpInputValue: ''
     }
+    // this.handleChange = this.handleChange.bind(this) // if not using arrow function then we need to bind our handleChange due to this context
   }
   handleChange = (e) => {
-    const targetValue = e.target.value;
     this.setState({
-      input: targetValue
+      input: e.target.value
     })
   }
   handleEvents = (e) => {
@@ -49,47 +49,51 @@ class EventHandling extends Component {
       <>
         <h1>Hello Events in React</h1>
         {/* Complared to vanilla javascript events named in React are camelCase written i.e. onclick becomes onClick */}
-        <button onClick={this.alertMe}>Click me</button>
-        <button onClick= {this.handleClick}>Handle Click</button>
+        <button onClick={this.alertMe} className="btn btn-success">Click me</button> <br/> <br/>
+        <button onClick= {this.handleClick} className="btn btn-success">Handle Click</button>
         <hr/>
         <form onSubmit={this.handleReverseText}>
-          <div>
+          <div className="form-group mx-sm-3 mb-2">
+          <label>
             Text: {this.state.input}
-          </div>
-          <div>
+          </label>
+
+           
             <input
             type="text"
-            value= {this.state.input || ''}
+            value= {this.state.input || ''}
             onChange= {this.handleChange}
             placeholder = "Enter a text"
+            className="form-control custom-input"
             />
-            <button>Reverse text</button>
+            <button className="btn btn-primary">Reverse text</button>
           </div>
         </form>
          {this.state.reverseText.length > 0  && (
           <p>Reversed text is : {this.state.reverseText} </p>
          )}
          <hr/>
-         <input
-          type="text"
-          value = {this.state.onKeyUpInputValue}
-          onChange = {this.handleEvents}
-          onKeyDown = {this.handleOnKeyPress}
-          onCopy = {this.handleOnCopy}
-
-          placeholder = "Enter a key"  />
+         <div className="form-group mx-sm-3 mb-2">
+            <input
+              type="text"
+              value = {this.state.onKeyUpInputValue}
+              onChange = {this.handleEvents}
+              onKeyDown = {this.handleOnKeyPress}
+              onCopy = {this.handleOnCopy}
+              className="form-control custom-input"
+              placeholder = "Enter a key"  />
+          </div>
           <p>Keyword pressed: {this.state.onKeyUpInputValue}</p>
-         {/* TODO- check more events such as: onClick
-          onContextMenu
+         {
+          /* TODO- check and play with more events such as: 
+          onClick
+          onFocus
+          onBlur
           onDoubleClick
           onDrag
-          onDragEnd
-          onDragEnter
-          onDragExit
-          onDragLeave
-          onDragOver
-          onDragStart
-          onDrop
+          onCopy
+          onCut
+          onPaste
           onMouseDown
           onMouseEnter
           onMouseLeave
@@ -100,6 +104,9 @@ class EventHandling extends Component {
           onChange
           onInput
           onSubmit
+          onKeyDown
+          onKeyPress
+          onKeyUp
           ...
           ....
           */}

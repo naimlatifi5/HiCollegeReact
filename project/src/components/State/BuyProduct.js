@@ -30,7 +30,7 @@ class BuyProduct extends Component {
     return <div>
     <p>Iphone 8+ - 8900kr</p>
     <strong>Quantity {this.state.quantity} item(s)</strong><br/>
-    <button onClick={this.buy}>Buy</button>
+    <button className="btn btn-primary" onClick={this.buy}>Buy</button>
   </div>
   }
 }
