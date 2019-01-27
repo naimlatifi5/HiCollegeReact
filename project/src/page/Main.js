@@ -2,12 +2,12 @@ import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import Home from '../components/Home';
 import JSX from '../components/JSX/Jsx';
-import FormListConditionalRendering from '../components/FormListConditionalRendering/Main';
+import ListConditionalRendering from '../components/ListConditionalRendering/Main';
 import LifeCycleMethods from '../components/LifeCycleMethods/Main';
 import Components from '../components/Components/Main';
 import Props from '../components/Props/Main';
 import State from '../components/State/Main';
-import Events from '../components/Events/Main';
+import EventsForms from '../components/EventsForms/Main';
 import Challenge from '../components/Challenge/Main';
 
 
@@ -21,8 +21,8 @@ const Main = () => (
       <Route path="/state" component={State}/>
       <Route path='/components' component={Components}/>
       <Route path='/props' component={Props}/>
-      <Route path='/formListConditionRendering' component={FormListConditionalRendering}/>
-      <Route path='/events' component={Events}/>
+      <Route path='/listConditionRendering' component={ListConditionalRendering}/>
+      <Route path='/eventsForms' component={EventsForms}/>
       <Route path='/lifeCycleMethods' component={LifeCycleMethods}/>
       <Route path='/challenge' component={Challenge}/>
     </Switch>

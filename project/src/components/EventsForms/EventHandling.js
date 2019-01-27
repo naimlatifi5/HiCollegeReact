@@ -46,9 +46,9 @@ class EventHandling extends Component {
 
     return(
       // if we do not want to use an extra duv as wraooer then we can use <React.fragment></React.fragment> eller <> </>
-      <>
-        <h1>Hello Events in React</h1>
-        {/* Complared to vanilla javascript events named in React are camelCase written i.e. onclick becomes onClick */}
+      <div>
+        <h1>Hello Events & Forms in React</h1>
+        {/* Compared to vanilla javascript events named in React are camelCase written i.e. onclick becomes onClick */}
         <button onClick={this.alertMe} className="btn btn-success">Click me</button> <br/> <br/>
         <button onClick= {this.handleClick} className="btn btn-success">Handle Click</button>
         <hr/>
@@ -58,7 +58,7 @@ class EventHandling extends Component {
             Text: {this.state.input}
           </label>
 
-           
+
             <input
             type="text"
             value= {this.state.input || ''}
@@ -85,7 +85,7 @@ class EventHandling extends Component {
           </div>
           <p>Keyword pressed: {this.state.onKeyUpInputValue}</p>
          {
-          /* TODO- check and play with more events such as: 
+          /* TODO- check and play with more events such as:
           onClick
           onFocus
           onBlur
@@ -110,7 +110,7 @@ class EventHandling extends Component {
           ...
           ....
           */}
-      </>
+      </div>
    )
   }
 }

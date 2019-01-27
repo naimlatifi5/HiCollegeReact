@@ -10,14 +10,13 @@ const Header = () => (
           <li><Link to='/state'>State</Link></li>
           <li><Link to='/components'>Components</Link></li>
           <li><Link to='/props'>Props</Link></li>
-          <li><Link to='/formListConditionRendering'>Form List & conditional rendering</Link></li>
-          <li><Link to='/events'>Events</Link></li>
+          <li><Link to='/listConditionRendering'>Lists & conditional rendering</Link></li>
+          <li><Link to='/eventsForms'>Events & Forms</Link></li>
           <li><Link to='/lifeCycleMethods'>Life Cycle Methods</Link></li>
           <li><Link to='/challenge'>Challenge</Link></li>
         </ul>
       </nav>
     </header>
   )
-  
+
   export default Header
-  

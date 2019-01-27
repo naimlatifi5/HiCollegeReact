@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import ChildComponent from './ChildComponent'
 class ParentComponent extends Component {
-  
+
   constructor(props) {
     console.group("constructor");
     console.groupEnd();
@@ -12,11 +12,7 @@ class ParentComponent extends Component {
       value: "Hello there from parent. Click me "
     };
   }
-  
-  componentWillMount() {
-    // many developers before used it to fetch data from any endpoint however this is not considered secure because we are not sure if data are fetched before the render() function is called. It is more recommented to use componentDidMount(). THIS FUNCTION IS DEPRICATED
-    console.log("========== Before rendering ==========");
-  }
+
   componentDidMount() {
     // right place to load data from any endpoints
     console.group("COMPONENTDIDMOUNT --------- Parent Component MOUNTED");
@@ -24,7 +20,7 @@ class ParentComponent extends Component {
     console.log('Right place to load data from any endpoints i.e via axios');
     console.groupEnd();
 
-  } 
+  }
   shouldComponentUpdate() {
     console.group("======== SHOULD COMPONENT UPDATED ======")
     console.log("This decides whether components needs to be re-rendered or not")
@@ -55,7 +51,7 @@ class ParentComponent extends Component {
   //   console.groupEnd();
   //   if (prevState.counter !== this.state.count) {
   //     //this will be capture as snapshot in componentDidUpdate
-  //     return 'value'; 
+  //     return 'value';
   //   }
   //   return null;
   // }
@@ -69,9 +65,6 @@ class ParentComponent extends Component {
       isError: true
     })
   }
-  componentWillReceiveProps(nextProps, prevState) {
-    // this FUNCTION IS DEPRICATED - UNSAFE_componentWillReciveProps. Use instead getDerivedStateFromProps
-  }
 
   componentWillUpdate(nextProps, nextState) {
     console.group('componentWillUpdate');
@@ -80,12 +73,12 @@ class ParentComponent extends Component {
   }
 
   componentWillUnmount() {
-    
+
   }
 
   handleParentClick = () => {
     this.setState({
-      // changing state for count by increase 1 
+      // changing state for count by increase 1
       count: this.state.count + 1
     })
   }
@@ -96,10 +89,9 @@ class ParentComponent extends Component {
     })
   }
 
-
   render() {
     return (
-      <>
+      <div>
         <p>Please open the console to see what is happening</p>
         <button className="btn btn-info" onClick={this.handleParentClick}>
           Click me to count: {this.state.count}
@@ -111,7 +103,7 @@ class ParentComponent extends Component {
           // passing state value to child comoonent
           this.state.hasError ? <h1>Crashed</h1> : <ChildComponent value={this.state.value} onClick={this.handleParentText}/>
         }
-      </>
+      </div>
     );
   }
 }

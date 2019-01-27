@@ -5,7 +5,7 @@ export function WelcomToComponent () {
   return <p>Welcome to function components</p>
 }
 
-// second function component with multipe props passed
+// Second function component with multipe props passed
 export const CustomFunctionComponent = ({className, textContent}) => {
   return <div className={className}>{ textContent }</div>
 }
