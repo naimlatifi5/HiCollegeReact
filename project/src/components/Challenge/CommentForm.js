@@ -1,8 +1,10 @@
 import React, {Component} from 'react'
 import DisplayComments from './CommentList'
-class Challenge extends Component {
- 
-
+var comments = [
+	{ id: '1', name: 'Naim', comment: 'I love react!'},
+	{ id: '2', name: 'Sara', comment: 'Welcome to React!'}
+];
+class CommentForm extends Component {
   render() {
     return ( <div>
      <div className="container">
@@ -16,10 +18,10 @@ class Challenge extends Component {
             <button type="button" className="btn btn-primary btn-lg btn-block">Submit</button>
             </form>
         </div>
-        <DisplayComments></DisplayComments>
+        <DisplayComments data={comments}></DisplayComments>
       </div> 
   </div>
   )}
 }
 
-export default Challenge
+export default CommentForm
