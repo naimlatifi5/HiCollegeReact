@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import DisplayComments from './CommentList'
+import CommentList from './CommentList'
 class Challenge extends Component {
  
 
@@ -16,7 +16,7 @@ class Challenge extends Component {
             <button type="button" className="btn btn-primary btn-lg btn-block">Submit</button>
             </form>
         </div>
-        <DisplayComments></DisplayComments>
+        <CommentList></CommentList>
       </div> 
   </div>
   )}

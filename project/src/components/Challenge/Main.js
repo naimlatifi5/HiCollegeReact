@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import Challenge from './AddComment'
+import Challenge from './CommentForm'
 class MainChallenge extends Component {
   render() {
     return <div>

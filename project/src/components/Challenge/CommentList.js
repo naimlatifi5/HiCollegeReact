@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 
-class DisplayComments extends Component {
+class CommentList extends Component {
   render() {
     return (<div className="display-comments col-12 col-lg-8">
       <div>Display all comments, if there are no comments show the message not comments added yet, send data as props</div>
@@ -26,4 +26,4 @@ class DisplayComments extends Component {
   }
 }
 
-export default DisplayComments
+export default CommentList
