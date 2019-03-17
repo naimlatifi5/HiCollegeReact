@@ -9,6 +9,10 @@ class MainEvents extends Component {
         <hr/>
         <DivToggler/>
         <hr/>
+        <div>------------------ Your challenge result below -------------</div>
+         {/* 
+          <Challenge></Challenge>
+         */}
       </div>
    )
   }

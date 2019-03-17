@@ -9,9 +9,7 @@ class CommentList extends Component {
       }
      let comments = this.props.data.map((item, index) => {      
         return (
-        <React.Fragment key={index}>  
-         <Comment name={item.name} commentMessage={item.comment} id={index} onClick={this.props.onClick}></Comment>
-        </React.Fragment>
+         <Comment  key={index} name={item.name} commentMessage={item.comment} id={index} onClick={this.props.onClick}></Comment>
         )
      })
      if(this.props.data.length > 0) {

@@ -7,7 +7,7 @@ class ChildState extends Component {
       super (props);
       this.state = {
           childState: 'Hello Child state',
-          mutateParentState: ''  // we are mutating the parent state inside child component
+          mutateParentState: ''
       }
     }
     handleParentStateChanges = () => {

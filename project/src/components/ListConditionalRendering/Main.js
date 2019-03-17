@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import DataComment from './DataComments'
 import Comments from './Comments'
 import ConditionalRendering from './ConditionalRendering'
-
+import Challenge from './Challenge';
 
 
 class FormListConditionalRendering extends Component {
@@ -12,6 +12,10 @@ class FormListConditionalRendering extends Component {
       <hr/>
       <ConditionalRendering isLoggedIn={false}></ConditionalRendering>
       <Comments data = {DataComment} ></Comments>
+      <div>------------------ Your challenge result below -------------</div>
+      {/* 
+      <Challenge></Challenge>
+      */}
   </div>
   }
 }

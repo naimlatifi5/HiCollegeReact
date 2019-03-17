@@ -9,7 +9,7 @@ class ComponentState extends Component {
     // to add a state create a constructor function that initalize the state
     // it is recommended even thought we do not send props to component to assign in the constructor function
     constructor (props) {
-      super (props); // super is a must when using constructore - for more read about how works with Inheritance in OOP
+      super (props); // super is a must when using constructor - for more read about how works with Inheritance in OOP
       this.state = {
           name: 'Naim'  // accessing the state can be done with this.state.name
       }
