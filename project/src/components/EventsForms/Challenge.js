@@ -1,23 +1,14 @@
 import React, { Component } from 'react'
 // TODO- Events challenge
 /* 
-  1. With use of JSX write the following 
+  1. Create a button toggler so when clicking it 
+     switches to on and off 
      HTML template
-    `<div class="jsx">
-        <h1>Hello JSX</h1>
-    </div>`
-  
-  2. Create an object that contains your firstname 
-     and lastname and then present the value of object 
-     inside of the html template 
-     <div class="jsx"></div>.
+    ` <div className="button-toggler">
+       <button> on/off </button>
+      </div>`
 
-  3. Modify the structure of the html template
-     so that the div with the class element 
-     jsx <div class="jsx"></div> 
-     does not render to the DOM.
-
-   4. Uncomment/include component <Challenge/> inside /JSX/Main.js 
+   2. Uncomment/include component <Challenge/> inside /EventsForms/Main.js 
       and VOILA you are DONE with the first challenge- Good Job
 */
 class Challenge extends Component {
