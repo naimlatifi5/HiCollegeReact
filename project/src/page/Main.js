@@ -18,8 +18,8 @@ const Main = () => (
     <Switch>
       <Route exact path='/' component={Home}/>
       <Route path='/jsx' component={MainJSX}/>
-      <Route path="/state" component={State}/>
       <Route path='/components' component={Components}/>
+      <Route path="/state" component={State}/>
       <Route path='/props' component={Props}/>
       <Route path='/listConditionRendering' component={ListConditionalRendering}/>
       <Route path='/eventsForms' component={EventsForms}/>

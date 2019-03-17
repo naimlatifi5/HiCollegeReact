@@ -11,7 +11,9 @@ class ChildState extends Component {
       }
     }
     handleParentStateChanges = () => {
-      this.setState({mutateParentState: this.props.name + " Latifi"}) // mutate via setState the state that we get as props from parent
+      this.setState(
+        {mutateParentState: this.props.name + " Latifi"}
+      ) // mutate via setState the state that we get as props from parent
     }
   render() {
     return <div>

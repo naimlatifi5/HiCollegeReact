@@ -1,27 +1,40 @@
 import React, { Component } from 'react'
 // TODO- State challenge
 /* 
-  1. With use of JSX write the following 
-     HTML template
-    `<div class="jsx">
-        <h1>Hello JSX</h1>
+  1. Inside the class component intialize a state with 
+     the property fullname with value of your first name only
+     and then call your fullname property from state 
+     inside your template
+     `<div class="state">
+        <h1> --- Your fullname property--- </h1>
     </div>`
   
-  2. Create an object that contains your firstname 
-     and lastname and then present the value of object 
-     inside of the html template 
-     <div class="jsx"></div>.
+  2. Inside of the function handleStateChange write the code 
+     to change the fullname state in order to be your 
+     first and last name, and when you press the button 
+     it will display your fullName on the page.
 
-  3. Modify the structure of the html template
-     so that the div with the class element 
-     jsx <div class="jsx"></div> 
-     does not render to the DOM.
-
-   4. Uncomment/include component <Challenge/> inside /JSX/Main.js 
-      and VOILA you are DONE with the first challenge- Good Job
+   3. Uncomment/include component <Challenge/> inside /State/Main.js 
+      and VOILA you are DONE with the challenge - Good Job 
 */
 class Challenge extends Component {
-   // ...your code here
+   constructor() {
+      super()
+     
+   }
+   handleStateChange = () => {
+      // .... your code here
+   }
+
+   render () {
+      return (
+         <div className="state"> 
+            <h1>What is your full name: --- your fullname --- </h1>
+            <button className="handleState" onClick={this.handleStateChange}>Change state</button>
+         </div>
+         
+      )
+   } 
 }
 
 export default Challenge

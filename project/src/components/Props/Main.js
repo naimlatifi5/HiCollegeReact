@@ -10,6 +10,7 @@ class Props extends Component {
     <h1>Hello Props</h1> 
     <ClassComponentProps name="Hello class component with props"/>
     <ClassComponentProps name="Hello class component with props and body props">Content inside body block</ClassComponentProps>
+    {/* with the help of spread the properties of the object that we pass are copied onto the components's props */}
     <BlockComponent {...blockData}/> 
     <div>------------------ Your challenge result below -------------</div>
       {/* 
