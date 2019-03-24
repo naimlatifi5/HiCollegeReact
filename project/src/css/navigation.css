@@ -1,14 +1,16 @@
 .nav {
     margin-bottom: 25px;
+    background-color: #333333;
+    width: 100%;
  }
-ul {
+ul{
       list-style-type: none;
       margin: 0;
       padding: 0;
       overflow: hidden;
-      background-color: #333333;
-      width: 100%;
+    
   }
+  
   
   li {
       float: left;
