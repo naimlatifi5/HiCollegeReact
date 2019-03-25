@@ -1,5 +1,9 @@
 import React, {Component} from 'react'
 import EventHandling from './EventHandling'
+import Challenge from './Challenge';
+import ChallengeForm from './ChallengeForm';
+
+
 class MainEvents extends Component {
   render() {
     return( 
@@ -10,6 +14,10 @@ class MainEvents extends Component {
          {/* 
           <Challenge></Challenge>
          */}
+          {/* 
+          <ChallengeForm></ChallengeForm>
+          */}
+        
       </div>
    )
   }
