@@ -8,7 +8,7 @@ import Components from '../components/Components/Main';
 import Props from '../components/Props/Main';
 import State from '../components/State/Main';
 import EventsForms from '../components/EventsForms/Main';
-import Challenge from '../components/ChallengeMocked/Main';
+import Challenge from '../components/Challenge/Main';
 
 
 // The Main component renders one of the three provided
