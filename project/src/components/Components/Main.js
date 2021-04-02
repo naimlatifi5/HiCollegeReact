@@ -2,7 +2,6 @@ import React from 'react'
 import {WelcomToComponent} from './FunctionComponent'
 import {CustomFunctionComponent} from './FunctionComponent'
 import MyClassComponent from './ClassComponents'
-import Challenge from './Challenge';
 
 const Components = () => {
   return (
@@ -17,10 +16,6 @@ const Components = () => {
       <CustomFunctionComponent className="box2" textContent="Second container" />
 
       <MyClassComponent/>
-      <div>------------------ Your challenge result below -------------</div>
-       {/* 
-        <Challenge></Challenge>
-     */}
     </React.Fragment>
   )
 }

@@ -7,8 +7,7 @@ class Comment extends Component {
             <div className="comment">{this.props.commentMessage}</div>
             <button type="button" className="btn btn-danger" onClick={this.props.onClick}>Ta bort</button>
         </li>
-
-  )}
+    )}
 }
 
 export default Comment

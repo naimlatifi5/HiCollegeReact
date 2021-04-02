@@ -2,12 +2,7 @@ import React, {Component} from 'react'
 import PropTypes from 'prop-types';
 
 // in a class component props are recieved by default and can be access with this.props in the component instance
-
 class ClassComponentWithProps extends Component {
-    constructor(props){
-      // constructor without a super() where super() will initalize the parent constructor will lead to bugs if you call this.props
-      super(props);
-    }
     render () {
       const { name } = this.props; 
       console.log("My props", this.props);
