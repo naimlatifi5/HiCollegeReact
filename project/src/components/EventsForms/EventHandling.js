@@ -57,8 +57,6 @@ class EventHandling extends Component {
           <label>
             Text: {this.state.input}
           </label>
-
-
             <input
             type="text"
             value= {this.state.input || ''}
