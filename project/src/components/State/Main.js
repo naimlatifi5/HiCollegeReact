@@ -5,7 +5,7 @@ class MainState extends Component {
 
   render() {
     return (
-    <div class="product-wrapper">
+    <div className="product-wrapper">
       <ComponentState name="hello prop"></ComponentState>
       <hr/>
       <BuyProduct></BuyProduct>
