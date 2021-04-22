@@ -22,7 +22,6 @@ ClassComponentWithProps.propTypes  = {
   // PropTypes.bool 
   // PropTypes.number
   // PropTypes.object
-  // PropTypes.
 
   // default props for a class Component
   ClassComponentWithProps.defaultProps = {
