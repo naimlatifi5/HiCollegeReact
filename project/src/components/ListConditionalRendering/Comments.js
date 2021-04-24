@@ -6,7 +6,7 @@ const items = numbers.map((item,i) =>
 );
 
 // function component in React are written with Capital letter in order for the React to distinguish between React component and html component
-function Comments (props) {
+const Comments =  (props) => {
     const headertable = (
       <thead>
       <tr>
@@ -18,7 +18,6 @@ function Comments (props) {
     )
   
     const bodytable = props.data.map((item, i) => 
-     
       <tr id= {item.id} key={i}>
         <td>{item.name}</td>
         <td>{item.email}</td>
@@ -26,7 +25,7 @@ function Comments (props) {
       </tr>
     )
    
-    if(props.data.length > 0 ) {
+    if (props.data.length > 0 ) {
       return (
         <React.Fragment>
         <table className="table table-hover">
@@ -43,7 +42,7 @@ function Comments (props) {
         }
         </React.Fragment>
       )
-       }else {
+       } else {
          return (<h1>There are no data in object</h1>)
        } 
   }

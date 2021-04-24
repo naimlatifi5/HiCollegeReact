@@ -8,9 +8,9 @@ const commentsData = [
   
     {
       id: 2,
-      name: "Sara Holm",
-      email: "sara.holm@hiq.se",
-      comment: "She loves React, too"
+      name: "Super Man",
+      email: "superman@test.se",
+      comment: "Superman loves React, too"
     },
   ]
 
