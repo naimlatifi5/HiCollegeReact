@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import CommentList from './CommentList'
 class CommentForm extends Component {
- 
     constructor(props) {
         super(props)
         this.state = {
@@ -39,7 +38,6 @@ class CommentForm extends Component {
         }
         
         this.state.comments.unshift({name: userName, comment:comment})
-
         // reset the state for input element after we have added to array
         this.setState({
             name: '',
@@ -53,7 +51,6 @@ class CommentForm extends Component {
         let indexLI = parseInt(e.target.parentNode.id);
          
         if( indexLI !== -1) {
-        
             removeCommentArray.splice(indexLI,1);
             // change state by applying the setState of commented array to our removedCommentArray
             this.setState({comments: removeCommentArray});
