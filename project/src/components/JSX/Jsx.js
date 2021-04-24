@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 const users = {
-  person1: "Sara Holm",
+  person1: "Superman",
   person2: "Naim Latifi",
   employee: "HIQ"
 }
