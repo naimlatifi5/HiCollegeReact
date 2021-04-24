@@ -1,7 +1,7 @@
 import React from 'react'
 
 // React function component without props
-export function WelcomToComponent () {
+export const WelcomToComponent = () => {
   return <p>Welcome to function components</p>
 }
 

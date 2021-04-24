@@ -1,6 +1,6 @@
 import React from 'react'
 import {WelcomToComponent} from './FunctionComponent'
-import {CustomFunctionComponent} from './FunctionComponent'
+import { CustomFunctionComponent } from './FunctionComponent'
 import MyClassComponent from './ClassComponents'
 
 const Components = () => {

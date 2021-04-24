@@ -8,11 +8,9 @@ class ClassComponent extends Component {
           toggle: false
         }
     }
-
     setToggle = () => {
        this.setState({ toggle: !this.state.toggle })
     }
-
     render() {
         return (
           <div className="class-component">
