@@ -17,7 +17,7 @@ class ClassComponent extends Component {
         return (
           <div className="class-component">
             <button type="button" onClick={ this.setToggle }>
-                Click me
+                Toggle me
             </button>
             { this.state.toggle ? <div> This is a div to toggle </div> : null }
           </div>
