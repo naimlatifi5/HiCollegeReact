@@ -4,8 +4,6 @@ import React, { Component } from 'react'
 class ChildComponent extends Component {
   // constructor initalize state or bind any events handlers to the class instance
   constructor(props) {
-    console.group("constructor")
-    console.groupEnd();
     // the special function super is important to call because it allows us to call the constructor of the parent class and initialize itself, and let us use this.props. Before super this.props is undefined.
     super(props);
     this.state = {
@@ -24,7 +22,6 @@ class ChildComponent extends Component {
   }
 
   handleChildClick = () => {
-    this.props.onClick();
     this.setState({
       counter: this.state.counter + 1,
     })

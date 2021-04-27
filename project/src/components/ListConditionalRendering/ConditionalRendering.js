@@ -3,17 +3,15 @@ import React from 'react'
 
 function UserLogedIn(props) {
     return <h1>Welcome back {props.name} </h1>
+}
+function UserNotLogedIn() {
+   return <button className="btn btn-secondary">Logga in</button>
+}
 
-}
-function UserNotLogedIn(props) {
-    return <button className="btn btn-secondary">Logga in</button>
-}
 function IsUserLogedIN (props) {
- const isLogedIn = props.isLoggedIn;
- if(isLogedIn) {
-     return <UserLogedIn name="Naim"/>
- }
- return <UserNotLogedIn/>
+    const isLogedIn = props.isLoggedIn;
+    return isLogedIn ? <UserLogedIn name="Naim" /> : <UserNotLogedIn /> 
+  
 }
 
-  export default IsUserLogedIN
+export default IsUserLogedIN

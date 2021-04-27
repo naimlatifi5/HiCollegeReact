@@ -1,5 +1,5 @@
-import React, {Component} from 'react'
-
+import React, { Component } from 'react'
+ 
 class EventHandling extends Component {
   constructor(props) {
     super (props)
@@ -50,8 +50,9 @@ class EventHandling extends Component {
         <h1>Hello Events & Forms in React</h1>
         {/* Compared to vanilla javascript events named in React are camelCase written i.e. onclick becomes onClick */}
         <button onClick={this.alertMe} className="btn btn-success">Click me</button> <br/> <br/>
-        <button onClick= {this.handleClick} className="btn btn-success">Handle Click</button>
-        <hr/>
+        <hr />
+
+        {/* Controll component */ }
         <form onSubmit={this.handleReverseText}>
           <div className="form-group mx-sm-3 mb-2">
           <label>

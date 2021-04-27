@@ -34,7 +34,6 @@ if(objectResponse.succes) {
 
 class Jsx extends Component {
   render() {
-    
     // jsx a javascript extension that allow as to write js code that looks like html 
     console.log("React object properties ", React);
     return (
@@ -43,7 +42,7 @@ class Jsx extends Component {
       // it is important to wrapp elements within a div as main container in jsx
       <div className="parent-tag">
         <h1 className="heading" id={headingId}>Hello Jsx</h1> 
-        <p style={paragraphStyle}>Users name are: {printUserNames(users)}</p>
+        <p style={paragraphStyle}>Users name are: { printUserNames(users) }</p>
         
           
           {
