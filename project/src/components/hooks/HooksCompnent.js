@@ -5,7 +5,7 @@ import React, { useState } from "react"
     const [toggle, setToggle] = useState(false)
   // multipe hooks declarations
     const [fruit, setFruit] = useState('banana');
-    const [todos, setTodos] = useState([{ text: "Learn Hooks" }])
+    //const [todos, setTodos] = useState([{ text: "Learn Hooks" }])
    
     const toggleTrueFalse = () => setToggle(!toggle)
    

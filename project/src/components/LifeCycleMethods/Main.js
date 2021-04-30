@@ -9,7 +9,9 @@ class ParentComponent extends Component {
       count: 0,
       hasError: false,
       value: "Hello there from parent. Click me ",
+      books: []
     }
+   
   }
 
   componentDidMount() {
@@ -18,6 +20,16 @@ class ParentComponent extends Component {
     console.log("Setting setState here will trigger a re-render")
     console.log("Right place to load data from any endpoints i.e via axios")
     console.groupEnd()
+    const apiUrl =
+      "https://learn-co-curriculum.github.io/books-json-example-api/books.json"
+     fetch(
+       apiUrl
+     )
+      .then((response) => response.json())
+      .then((bookData) => {
+         console.log("Books data", bookData)
+         this.setState({ books: bookData })
+     })
   }
   shouldComponentUpdate() {
     console.group("======== SHOULD COMPONENT UPDATED ======")
