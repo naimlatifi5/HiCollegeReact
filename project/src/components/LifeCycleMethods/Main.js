@@ -9,7 +9,8 @@ class ParentComponent extends Component {
       count: 0,
       hasError: false,
       value: "Hello there from parent. Click me ",
-      books: []
+      books: [],
+      name: "Superman"
     }
    
   }
@@ -29,7 +30,8 @@ class ParentComponent extends Component {
       .then((bookData) => {
          console.log("Books data", bookData)
          this.setState({ books: bookData })
-     })
+      })
+    document.title = this.state.name
   }
   shouldComponentUpdate() {
     console.group("======== SHOULD COMPONENT UPDATED ======")
@@ -41,7 +43,7 @@ class ParentComponent extends Component {
     return true
   }
 
-  componentWillUpdate(nextProps, nextState) {
+  componentWillUpdate() {
     console.group("componentWillUpdate")
     console.log("get called on before every re-rendering")
     console.log(
@@ -64,18 +66,10 @@ class ParentComponent extends Component {
       console.log("STATE HAS CHANGED")
     }
     console.groupEnd()
+    document.title = this.state.name
   }
 
-  componentDidCatch(error, info) {
-    console.group("===========COMPONENTDIDCATCH  ==========")
-    console.log("ERROR", error)
-    console.log("INFO", info)
-    console.groupEnd()
-    this.setState({
-      isError: true,
-    })
-  }
-
+  
   handleParentClick = () => {
     this.setState({
       // changing state for count by increase 1
@@ -88,6 +82,11 @@ class ParentComponent extends Component {
       value: "You have clicked me!",
     })
   }
+  handleChange = (e) => {
+    this.setState({
+      name: e.target.value
+    })
+  }
 
   render() {
     return (
@@ -98,6 +97,11 @@ class ParentComponent extends Component {
         </button>
         <br />
         <br />
+        <input
+          type="text"
+          value={this.state.name}
+          onChange={this.handleChange}
+        />
         {// ternary operator if we have an error in state then crashe otherwise continue counting within ChildComponent component
         // passing state value to child comoonent
         this.state.hasError ? (

@@ -21,7 +21,7 @@ import React, { useState } from "react"
         </button>
         {toggle ? <div> This is a div to toggle via hooks </div> : null}
         <div>Fruit is: { fruit }</div>
-        <button type="button" onClick={getFruit}>
+        <button type="button" onClick={ getFruit }>
           Click to change fruit
         </button>
       </div>
