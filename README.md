@@ -1,19 +1,22 @@
 # HiCollegeReact
 
 ## Agenda
-* ### What is React?  
-* ### Why React? 
-* ### JSX 
-* ### State, life cycle and events 
-* ### Handling data with props
-* ### Form, lists and conditional rendering 
-* ### Containers and functional components 
 
+- ### What is React?
+- ### Why React?
+- ### JSX
+- ### State, life cycle and events
+- ### Handling data with props
+- ### Form, lists and conditional rendering
+- ### Containers and functional components
+- ### A basic introduction to hooks
 
 ## Available Scripts
 
 In the project directory, you can run:
+
 ### `npm install`
+
 ### `npm start`
 
 Runs the app in the development mode.<br>
