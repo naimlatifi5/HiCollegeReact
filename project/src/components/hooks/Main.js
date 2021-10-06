@@ -1,18 +1,29 @@
-import React, { Component } from "react"
-import ClassComponent from "./ClassComponent.js"
-import HooksComponent from "./HooksCompnent.js"
-class MainComponent extends Component {
-  render() {
-    return (
-      <>
-        {/* Avoid the uneccessary div wrapper */}
-            <h1>Hooks</h1>
-            <h4>Class component</h4>
-            <ClassComponent></ClassComponent>
-            <h4>Hooks</h4>
-            <HooksComponent></HooksComponent>
-      </>
-    )
-  }
+import React from 'react'
+import ClassComponent from './ClassComponent.js'
+import HooksComponent from './HooksCompnent.js'
+import CounterButton from './CounterButton.js'
+import CounterButtonWithContext from './CounterButtonWithContext.js'
+import { CounterProvider } from './useContext/CounterProvider.js'
+import CartUpdates from './CartUpdates.js'
+const MainComponent = () => {
+  return (
+    <>
+      {/* Avoid the uneccessary div wrapper */}
+      <h1>Hooks</h1>
+      <h4>Class component</h4>
+      <ClassComponent></ClassComponent>
+      <h4>Hooks</h4>
+      <HooksComponent></HooksComponent>
+      <br />
+      <CounterButton></CounterButton>
+
+      <br />
+      <CounterProvider>
+        <h2>Counter Button with context</h2>
+        <CartUpdates />
+        <CounterButtonWithContext />
+      </CounterProvider>
+    </>
+  )
 }
 export default MainComponent
