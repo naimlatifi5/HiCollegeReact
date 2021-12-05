@@ -5,6 +5,7 @@ import CounterButton from './CounterButton.js'
 import CounterButtonWithContext from './CounterButtonWithContext.js'
 import { CounterProvider } from './useContext/CounterProvider.js'
 import CartUpdates from './CartUpdates.js'
+import AsyncOperation from './asyncOperation/asyncComponent.js'
 const MainComponent = () => {
   return (
     <>
@@ -23,6 +24,8 @@ const MainComponent = () => {
         <CartUpdates />
         <CounterButtonWithContext />
       </CounterProvider>
+      <h2>Aync operation and useEffect hooks</h2>
+      <AsyncOperation></AsyncOperation>
     </>
   )
 }

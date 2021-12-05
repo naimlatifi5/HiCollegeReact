@@ -1,5 +1,4 @@
 import React from 'react'
-import { CounterProvider } from './components/hooks/useContext/CounterProvider'
 import './css/App.css'
 import './css/navigation.css'
 import Header from './page/Header'
