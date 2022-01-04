@@ -35,11 +35,11 @@ const Header = () => (
           <Link to="/hooks">Hooks</Link>
         </li>
         <li>
-          <Link to="/challenge">Challenge</Link>
+          <Link to="/challenges">Challenges</Link>
         </li>
       </ul>
     </nav>
   </header>
 )
 
-  export default Header
+export default Header

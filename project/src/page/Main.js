@@ -8,7 +8,7 @@ import Components from '../components/Components/Main'
 import Props from '../components/Props/Main'
 import State from '../components/State/Main'
 import EventsForms from '../components/EventsForms/Main'
-import Challenge from '../components/Challenge/Main'
+import Challenge from '../components/Challenges/Main'
 import Hooks from '../components/hooks/Main'
 
 // The Main component renders one of the three provided
@@ -27,7 +27,7 @@ const Main = () => (
         component={ListConditionalRendering}
       />
       <Route path="/lifeCycleMethods" component={LifeCycleMethods} />
-      <Route path="/challenge" component={Challenge} />
+      <Route path="/challenges" component={Challenge} />
       <Route path="/hooks" component={Hooks} />
     </Switch>
   </main>
