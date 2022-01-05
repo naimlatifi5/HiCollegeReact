@@ -6,7 +6,6 @@ class MainChallenge extends Component {
   render() {
     return (
       <div>
-        <h1>Welcome to this challenge section</h1>
         <Challenge1 />
         <hr />
         <Challenge2 />
