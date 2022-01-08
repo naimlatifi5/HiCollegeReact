@@ -12,10 +12,10 @@ const Header = () => (
           <Link to="/jsx">JSX</Link>
         </li>
         <li>
-          <Link to="/components">Components</Link>
+          <Link to="/state">State</Link>
         </li>
         <li>
-          <Link to="/state">State</Link>
+          <Link to="/components">Components</Link>
         </li>
         <li>
           <Link to="/props">Props</Link>

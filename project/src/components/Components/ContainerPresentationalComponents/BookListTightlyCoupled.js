@@ -1,4 +1,5 @@
 // Tightly coupled component
+import React, { Component } from 'react'
 class BookList extends Component {
   constructor(props) {
     super(props)
@@ -7,10 +8,9 @@ class BookList extends Component {
       books: [],
     }
   }
-
   componentDidMount() {
     fetch(
-      "https://learn-co-curriculum.github.io/books-json-example-api/books.json"
+      'https://learn-co-curriculum.github.io/books-json-example-api/books.json',
     )
       .then((response) => response.json())
       .then((bookData) => this.setState({ books: bookData.books }))
@@ -20,7 +20,7 @@ class BookList extends Component {
     return this.state.books.map((book) => {
       return (
         <div className="book">
-          <img src={book.img_url} />
+          <img src={book.img_url} alt="BookList" />
           <h3>{book.title}</h3>
         </div>
       )
@@ -31,3 +31,4 @@ class BookList extends Component {
     return <div className="book-list">{this.renderBooks()}</div>
   }
 }
+export default BookList

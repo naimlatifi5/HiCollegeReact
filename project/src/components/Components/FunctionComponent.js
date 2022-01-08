@@ -1,11 +1,6 @@
 import React from 'react'
 
 // React function component without props
-export const WelcomToComponent = () => {
-  return <p>Welcome to function components</p>
-}
-
-// Second function component with multipe props passed
-export const CustomFunctionComponent = ({className, textContent}) => {
-  return <div className={className}>{ textContent }</div>
+export const FunctionComponent = () => {
+  return <p>First function component</p>
 }
