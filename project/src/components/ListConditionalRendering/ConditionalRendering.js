@@ -1,17 +1,15 @@
 import React from 'react'
-// list rendering 
+// list rendering
 
-function UserLogedIn(props) {
-    return <h1>Welcome back {props.name} </h1>
+const UserLoggedIn = ({ name }) => {
+  return <h1>Welcome back {name} </h1>
 }
-function UserNotLogedIn() {
-   return <button className="btn btn-secondary">Logga in</button>
-}
-
-function IsUserLogedIN (props) {
-    const isLogedIn = props.isLoggedIn;
-    return isLogedIn ? <UserLogedIn name="Naim" /> : <UserNotLogedIn /> 
-  
+const UserNotLoggedIn = () => {
+  return <button className="btn btn-secondary">Login</button>
 }
 
-export default IsUserLogedIN
+const IsUserLoggedIN = ({ isLoggedIn }) => {
+  return isLoggedIn ? <UserLoggedIn name="Naim" /> : <UserNotLoggedIn />
+}
+
+export default IsUserLoggedIN
