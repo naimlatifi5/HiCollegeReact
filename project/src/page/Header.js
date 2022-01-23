@@ -30,9 +30,6 @@ const Header = () => (
           </Link>
         </li>
         <li>
-          <Link to="/lifeCycleMethods">Life Cycle Methods</Link>
-        </li>
-        <li>
           <Link to="/hooks">Hooks</Link>
         </li>
         <li>

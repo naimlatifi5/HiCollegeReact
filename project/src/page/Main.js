@@ -3,7 +3,6 @@ import { Switch, Route } from 'react-router-dom'
 import Home from '../components/Home'
 import MainJSX from '../components/JSX/Main'
 import ListConditionalRendering from '../components/ListConditionalRendering/Main'
-import LifeCycleMethods from '../components/LifeCycleMethods/Main'
 import Components from '../components/Components/Main'
 import Props from '../components/Props/Main'
 import State from '../components/State/Main'
@@ -26,7 +25,6 @@ const Main = () => (
         path="/listConditionRendering"
         component={ListConditionalRendering}
       />
-      <Route path="/lifeCycleMethods" component={LifeCycleMethods} />
       <Route path="/challenges" component={Challenge} />
       <Route path="/hooks" component={Hooks} />
     </Switch>
