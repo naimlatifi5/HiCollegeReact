@@ -10,7 +10,7 @@ import React, { Component } from 'react'
 class Challenge2 extends Component {
   // write your magic below this line :)
   render() {
-    return <div></div>
+    return <h1>Challenge2 - Render Online courses</h1>
   }
 }
 export default Challenge2
