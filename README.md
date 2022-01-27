@@ -10,6 +10,7 @@
 - ### Form, lists and conditional rendering
 - ### Containers and functional components
 - ### A basic introduction to hooks
+- ### Code challenges & code blocks
 
 ## Available Scripts
 

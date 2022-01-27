@@ -8,7 +8,7 @@ function fetchUser() {
     setTimeout(() => {
       let response = { id: 1, name: 'Naim', lastName: 'Latifi' }
       resolve(response)
-    }, 1000)
+    }, 2000)
   })
 }
 
@@ -30,7 +30,6 @@ const asyncComponent = () => {
       promise.cancel()
     }
   }, [])
-
   return (
     <div className="wrapper-user">
       <p>ID: {id}</p>

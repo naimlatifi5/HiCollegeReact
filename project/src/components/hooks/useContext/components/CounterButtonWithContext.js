@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { CounterContext } from './useContext/CounterContext'
+import { CounterContext } from '../provider/CounterContext'
 const CounterButtonWithContext = () => {
   const [numberOfClicks, increment, incrementBy, setIncrementBy] = useContext(
     CounterContext,
