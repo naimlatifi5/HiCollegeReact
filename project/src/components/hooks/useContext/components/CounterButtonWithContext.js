@@ -8,14 +8,13 @@ const CounterButtonWithContext = () => {
     <>
       <p>You have clicked the button {numberOfClicks} times</p>
 
-      <label>
-        Incremebt by:
-        <input
-          value={incrementBy}
-          type="number"
-          onChange={(e) => setIncrementBy(parseInt(e.target.value))}
-        />
-      </label>
+      <label htmlFor="number">Incremebt by:</label>
+      <input
+        name="number"
+        value={incrementBy}
+        type="number"
+        onChange={(e) => setIncrementBy(parseInt(e.target.value))}
+      />
 
       <button onClick={() => increment()}>Click me</button>
     </>

@@ -6,17 +6,16 @@ const CounterButton = () => {
   return (
     <>
       <p>You have clicked the button {numberOfClicks} times</p>
-      <label>
-        Incremebt by:
-        <input
-          value={incrementBy}
-          type="number"
-          onChange={(e) => setIncrementBy(parseInt(e.target.value))}
-        />
-        <button onClick={() => setNumberOfClicks(numberOfClicks + incrementBy)}>
-          Click me
-        </button>
-      </label>
+      <label htmlFor="number">Increment by:</label>
+      <input
+        name="number"
+        value={incrementBy}
+        type="number"
+        onChange={(e) => setIncrementBy(parseInt(e.target.value))}
+      />
+      <button onClick={() => setNumberOfClicks(numberOfClicks + incrementBy)}>
+        Click me
+      </button>
     </>
   )
 }
