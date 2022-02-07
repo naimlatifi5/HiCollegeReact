@@ -14,7 +14,7 @@ const FunctionComponentProps = ({
     <div className="block-container">
       <img src={imageUrl} className="block-container__image" alt="react" />
       <div className="block-container__content">
-        <p>{text}</p>{' '}
+        <p>{text}</p>
         {/* passing default props or default props can also be used as text || "this is a default prop" */}
       </div>
       <a href={href} className="btn">

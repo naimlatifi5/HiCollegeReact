@@ -1,7 +1,11 @@
 import React from 'react'
 
 const Challenge4 = () => {
-  return <div>Challenge 4 with hooks</div>
+  return (
+    <div>
+      <h1>Challenge4- Click counter with hooks</h1>
+    </div>
+  )
 }
 
 export default Challenge4

@@ -14,13 +14,17 @@ const HooksComponent = () => {
   }
 
   // Similar to componentDidMount and componentDidUpdate:
+  // useEffect(() => {
+  //   document.title = name
+  // })
+  // re-trigger only once with empty []
   useEffect(() => {
     document.title = name
-  })
-  // re-trigger only once with empty []
-  //  useEffect(() => {
-  //     document.title = name
-  //  }, [])
+  }, [])
+  // retrigger whenever property has changed
+  //   useEffect(() => {
+  //   document.title = name
+  // }, [name])
 
   return (
     <div className="hooks">
