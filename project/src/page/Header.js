@@ -35,6 +35,9 @@ const Header = () => (
         <li>
           <Link to="/challenges">Challenges</Link>
         </li>
+        <li>
+          <Link to="/hooks10">All 10 hooks</Link>
+        </li>
       </ul>
     </nav>
   </header>

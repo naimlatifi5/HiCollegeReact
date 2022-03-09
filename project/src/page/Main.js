@@ -9,6 +9,7 @@ import State from '../components/State/Main'
 import EventsForms from '../components/EventsForms/Main'
 import Challenge from '../components/Challenges/Main'
 import Hooks from '../components/hooks/Main'
+import Hooks10 from '../components/allHooks/hooks/Main'
 
 // The Main component renders one of the three provided
 // Routes (provided that one matches)
@@ -27,6 +28,7 @@ const Main = () => (
       />
       <Route path="/challenges" component={Challenge} />
       <Route path="/hooks" component={Hooks} />
+      <Route path="/Hooks10" component={Hooks10} />
     </Switch>
   </main>
 )
