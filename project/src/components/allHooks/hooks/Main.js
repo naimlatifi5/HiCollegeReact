@@ -2,6 +2,7 @@ import React from 'react'
 import UseStateHook from './UseState'
 import UseEffect from './UseEffect'
 import UseRefHook from './UseRef'
+import UseLayoutEffect from './UseLayoutEffect'
 export default function Main() {
   return (
     <div>
@@ -14,6 +15,8 @@ export default function Main() {
       <UseEffect />
       <h2>Use ref hook</h2>
       <UseRefHook />
+      <h2>Use Layout effect hook</h2>
+      <UseLayoutEffect />
     </div>
   )
 }
