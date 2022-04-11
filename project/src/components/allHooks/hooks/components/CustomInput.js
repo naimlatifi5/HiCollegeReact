@@ -4,7 +4,8 @@ const CustomInput = (props, ref) => {
   const customInput = useRef()
   useImperativeHandle(ref, () => ({
     focus: () => {
-      console.log('Input is in focus....')
+      customInput.current.style.backgroundColor = 'rgb(193 192 192)'
+      customInput.current.style.color = '#fff'
     },
   }))
   return <input ref={customInput} {...props} placeholder="type here..." />
