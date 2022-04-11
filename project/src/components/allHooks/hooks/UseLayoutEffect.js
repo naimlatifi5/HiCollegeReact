@@ -36,23 +36,24 @@ const UseLayoutEffectHook = () => {
   const handleClick = () => {
     setToggle((prev) => !prev)
   }
-  // useEffect(() => {
-  //   if (button == null || divWrapper == null) return
-  //   const { bottom } = button.current.getBoundingClientRect()
-  //   if (divWrapper.current) {
-  //     divWrapper.current.style.top = `${bottom + 100}px`
-  //   }
-  // }, [toggle])
-
-  // with useLayout the div will not jump as with the useEffect since useLayout is synchronoused and where the DOM is painted. UseEffect is asynchronous and it is called after DOM is painted
-
-  useLayoutEffect(() => {
+  // with useEffect div will flicker a little bit since it is called after DOM is painted
+  useEffect(() => {
     if (button == null || divWrapper == null) return
     const { bottom } = button.current.getBoundingClientRect()
     if (divWrapper.current) {
       divWrapper.current.style.top = `${bottom + 100}px`
     }
   }, [toggle])
+
+  // with useLayout the div will not jump as with the useEffect since useLayout is synchronoused and where the DOM is painted. UseEffect is asynchronous and it is called after DOM is painted
+
+  // useLayoutEffect(() => {
+  //   if (button == null || divWrapper == null) return
+  //   const { bottom } = button.current.getBoundingClientRect()
+  //   if (divWrapper.current) {
+  //     divWrapper.current.style.top = `${bottom + 100}px`
+  //   }
+  // }, [toggle])
   return (
     <>
       <input type="text" value="Naim" ref={inputRef} />
@@ -73,7 +74,6 @@ const UseLayoutEffectHook = () => {
       <br />
       <br />
       <br />
-      <div>hasdfhasdhfadsfasdf</div>
     </>
   )
 }

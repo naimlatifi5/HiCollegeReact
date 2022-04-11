@@ -3,6 +3,7 @@ import UseStateHook from './UseState'
 import UseEffect from './UseEffect'
 import UseRefHook from './UseRef'
 import UseLayoutEffect from './UseLayoutEffect'
+import UseImperativeHandle from './UseImperativeHandle'
 export default function Main() {
   return (
     <div>
@@ -17,6 +18,8 @@ export default function Main() {
       <UseRefHook />
       <h2>Use Layout effect hook</h2>
       <UseLayoutEffect />
+      <h2>Use Imperative Handle hook</h2>
+      <UseImperativeHandle />
     </div>
   )
 }
