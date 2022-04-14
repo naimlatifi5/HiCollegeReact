@@ -56,7 +56,7 @@ const UseLayoutEffectHook = () => {
   // }, [toggle])
   return (
     <>
-      <input type="text" value="Naim" ref={inputRef} />
+      <input type="text" value="Naim" ref={inputRef} readOnly />
       <br />
       <br />
       <button type="text" onClick={handleClick} ref={button}>

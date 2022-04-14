@@ -12,6 +12,7 @@ const UseImperativeHandle = () => {
       <CustomInput onFocus={handleFocusFromParent} ref={inputRef} />
       <br />
       <br />
+      {/* TODO - create a toggle with two buttons, the child component should hold the logic for toggling and parent component on click should toggle */}
     </>
   )
 }
