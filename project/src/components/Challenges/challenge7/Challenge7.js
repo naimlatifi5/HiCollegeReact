@@ -32,6 +32,7 @@ const ChildComponent = ({ text }) => {
     console.log("this is triggered");
     return `I like ${words}`;
   };
+  // write your magic below this line :) feel free to alter the code blow
 
   return <p>{alterText(text)}</p>;
 };
