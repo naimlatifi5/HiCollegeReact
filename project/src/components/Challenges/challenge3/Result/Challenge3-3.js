@@ -1,57 +1,35 @@
-import React from 'react'
+import React, { useState } from "react";
 
-class Result extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      count: 0,
-    }
-    // if no arrow function used in method we need to bind
-    //this.increment = this.increment.bind(this)
-    //this.decrement = this.decrement.bind(this)
-    //this.reset = this.reset.bind(this)
-  }
-  // if we have arrow function here no need to bind
-  increment = () => {
-    this.setState({
-      count: this.state.count + 1,
-    })
-  }
-  decrement = () => {
-    if (this.state.count <= 0) {
-      return
-    }
-    this.setState({
-      count: this.state.count - 1,
-    })
-  }
-  reset = () => {
-    this.setState({
-      count: 0,
-    })
-  }
+const Result = () => {
+  const [count, setCount] = useState(0);
 
-  render() {
-    return (
-      <div>
-        <h1>Build a simple quantity counter</h1>
-        <button className="inc" onClick={this.increment}>
-          +
-        </button>
-        <input type="number" value={this.state.count} />
-        <button
-          disabled={this.state.count === 0}
-          className="dec"
-          onClick={this.decrement}
-        >
-          -
-        </button>
-        <button className="reset" onClick={this.reset}>
-          Reset
-        </button>
-      </div>
-    )
-  }
-}
+  const increment = () => {
+    setCount(count + 1);
+  };
 
-export default Result
+  const decrement = () => {
+    if (count <= 0) return;
+    setCount(count - 1);
+  };
+
+  const reset = () => {
+    setCount(0);
+  };
+
+  return (
+    <div>
+      <h1>Build a simple quantity counter</h1>
+      <button className="inc" onClick={increment}>
+        +
+      </button>
+      <input type="number" value={count} />
+      <button disabled={count === 0} className="dec" onClick={decrement}>
+        -
+      </button>
+      <button className="reset" onClick={reset}>
+        Reset
+      </button>
+    </div>
+  );
+};
+export default Result;
