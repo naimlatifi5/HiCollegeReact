@@ -19,7 +19,7 @@ const App = () => {
 
   return (
     <div style={themeStyle}>
-      <h4>Random Joke</h4>
+      <h4>Use useMemo Hook to prevent expensive value rendering in the app</h4>
       <input value={text} onChange={onChange} />
       <ChildComponent text={text} />
       <button onClick={handleTheme}>Change Theme</button>
