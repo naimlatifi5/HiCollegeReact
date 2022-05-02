@@ -5,7 +5,7 @@ import Challenge3 from "./challenge3/Challenge3";
 import Challenge4 from "./challenge4/Challenge4";
 import Challenge5 from "./challenge5/Challenge5";
 import Challenge6 from "./challenge6/Challenge6";
-import Challenge8 from "./challenge8/Result/Challenge8_result";
+import Challenge8 from "./challenge8/Challenge8";
 class MainChallenge extends Component {
   render() {
     return (

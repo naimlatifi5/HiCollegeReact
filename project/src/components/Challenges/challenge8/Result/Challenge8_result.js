@@ -11,6 +11,7 @@ const App = () => {
   //   return [number, number + 1, number + 2];
   // };
 
+  // solution is to use useCallback for the above function to keep track on the state value to see if the value is changed
   const callBackGetNumberList = useCallback(() => {
     return [number, number + 1, number + 2];
   }, [number]);
@@ -42,7 +43,7 @@ const List = ({ getNumberList }) => {
 
   useEffect(() => {
     setList(getNumberList());
-    // this setState will only be triggered when number is changed.
+    // this setState will only be triggered when the number in the useState is changed.
     console.log("updating");
   }, [getNumberList]);
 
