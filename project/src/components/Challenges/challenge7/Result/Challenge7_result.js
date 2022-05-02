@@ -29,7 +29,7 @@ const App = () => {
 
 const ChildComponent = ({ text }) => {
   const alteredText = (words) => {
-    console.log("hello");
+    console.log("Challenge7 - this is triggered");
     return `I like ${words}`;
   };
   const memoAlteredText = useMemo(() => alteredText(text), [text]);

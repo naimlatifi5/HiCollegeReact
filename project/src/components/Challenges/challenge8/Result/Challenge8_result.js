@@ -44,7 +44,7 @@ const List = ({ getNumberList }) => {
   useEffect(() => {
     setList(getNumberList());
     // this setState will only be triggered when the number in the useState is changed.
-    console.log("updating");
+    console.log("challenge8 - updating");
   }, [getNumberList]);
 
   return (

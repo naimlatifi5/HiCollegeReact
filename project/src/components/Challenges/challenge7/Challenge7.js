@@ -29,7 +29,7 @@ const App = () => {
 
 const ChildComponent = ({ text }) => {
   const alterText = (words) => {
-    console.log("this is triggered");
+    console.log("Challenge7 - this is triggered");
     return `I like ${words}`;
   };
   // write your magic below this line :) feel free to alter the code blow
