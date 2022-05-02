@@ -21,10 +21,8 @@ const Challenge6 = () => {
   return (
     <div>
       <h1>
-        Challenge6 - First Create 2 buttons, one triggers focus effect on the
-        input, the other triggers unfocus/blur effect the input. Then, while
-        clicking on the button, it will show messages about the current and
-        previous values of "isFocused" state.
+        Challenge6 - use useRef to focus and unfocus an input field and also
+        show information of the previous and current state.
       </h1>
       <input ref={inputRef} value="" />
       <button onClick={focus}> Focus Me</button>

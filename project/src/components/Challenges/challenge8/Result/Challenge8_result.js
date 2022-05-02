@@ -1,38 +1,58 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 
-const Challenge6 = () => {
-  const inputRef = useRef();
-  const [isFocused, setIsFocused] = useState(false);
-  const previousInputValue = useRef("");
+const App = () => {
+  const [number, setNumber] = useState(0);
+  const [dark, setDark] = useState(false);
 
-  const focus = () => {
-    inputRef.current.focus();
-    setIsFocused(true);
+  /* this getNumberList function is just to mimic the api request function
+   that requires to use a state value as a parameter in the function */
+
+  // const getNumberList = (e) => {
+  //   return [number, number + 1, number + 2];
+  // };
+
+  const callBackGetNumberList = useCallback(() => {
+    return [number, number + 1, number + 2];
+  }, [number]);
+
+  const theme = {
+    backgroundColor: dark ? "black" : "white",
+    color: dark ? "white" : "black",
   };
-  const blur = () => {
-    inputRef.current.blur();
-    setIsFocused(false);
-  };
-
-  useEffect(() => {
-    previousInputValue.current = isFocused;
-  }, [isFocused]);
 
   return (
-    <div>
+    <div style={theme}>
       <h1>
-        Challenge6 - First Create 2 buttons, one triggers focus effect on the
-        input, the other triggers unfocus/blur effect the input. Then, while
-        clicking on the button, it will show messages about the current and
-        previous values of "isFocused" state.
+        Challenge 8 Challenge 8 - use useCallback to avoid unnecessary component
+        renderings
       </h1>
-      <input ref={inputRef} value="" />
-      <button onClick={focus}> Focus Me</button>
-      <button onClick={blur}> Blur Me </button>
-      <p>Current Value:{isFocused ? "true" : "false"}</p>
-      <p>Previous Value:{previousInputValue.current ? "true" : "false"}</p>
+      <input
+        type="number"
+        value={number}
+        onChange={(e) => setNumber(e.target.value)}
+      />
+      <button onClick={() => setDark(!dark)}>Toggle Theme</button>
+      <List getNumberList={callBackGetNumberList} />
     </div>
   );
 };
 
-export default Challenge6;
+const List = ({ getNumberList }) => {
+  const [list, setList] = useState([]);
+
+  useEffect(() => {
+    setList(getNumberList());
+    // this setState will only be triggered when number is changed.
+    console.log("updating");
+  }, [getNumberList]);
+
+  return (
+    <ul>
+      {list.map((item, index) => (
+        <li key={index}>{item}</li>
+      ))}
+    </ul>
+  );
+};
+
+export default App;
