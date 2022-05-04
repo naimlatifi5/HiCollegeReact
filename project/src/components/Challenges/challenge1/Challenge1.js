@@ -1,7 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const Challenge1 = () => {
-  return <div>Challenge1</div>
-}
+  return (
+    <div>
+      <h1>Challenge1 - JSX</h1>
+    </div>
+  );
+};
 
-export default Challenge1
+export default Challenge1;
