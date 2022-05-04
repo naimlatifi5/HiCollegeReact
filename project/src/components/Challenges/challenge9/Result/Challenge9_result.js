@@ -74,6 +74,7 @@ const App = () => {
               {book.id} - {book.title}
             </h3>
             <p>{book.author}</p>
+
             <button onClick={() => deleteBook(book.id)}>Delete Book</button>
           </div>
         );

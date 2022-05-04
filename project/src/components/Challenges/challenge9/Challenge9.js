@@ -16,7 +16,10 @@ const App = () => {
 
   // This app is uncompleted, please write your magic code below to complete the functions, .
 
+  const reducer = () => {};
+
   const [book, setBook] = useState({ id: 0, title: "", author: "" });
+  const [books, dispatch] = useReducer(reducer, initialBooks);
 
   const handleOnChange = (e) => {
     setBook({
