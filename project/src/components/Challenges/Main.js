@@ -6,6 +6,7 @@ import Challenge4 from "./challenge4/Challenge4";
 import Challenge5 from "./challenge5/Challenge5";
 import Challenge6 from "./challenge6/Challenge6";
 import Challenge7 from "./challenge7/Challenge7";
+import Challenge9 from "./challenge9/Result/Challenge9_result";
 class MainChallenge extends Component {
   render() {
     return (
@@ -23,6 +24,8 @@ class MainChallenge extends Component {
         <Challenge6 />
         <hr />
         <Challenge7 />
+        <hr />
+        <Challenge9 />
       </div>
     );
   }
