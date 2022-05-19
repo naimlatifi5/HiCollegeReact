@@ -6,6 +6,7 @@ import UseLayoutEffect from './UseLayoutEffect'
 import UseImperativeHandle from './UseImperativeHandle'
 import UseMemo from './UseMemo'
 import UseReducer from './UseReducer'
+import UseDebugValue from './UseDebugValue'
 export default function Main() {
   return (
     <div>
@@ -26,6 +27,8 @@ export default function Main() {
       <UseMemo />
       <h2>Use reducer hook</h2>
       <UseReducer />
+      <h2>Use debug value hook</h2>
+      <UseDebugValue />
     </div>
   )
 }
