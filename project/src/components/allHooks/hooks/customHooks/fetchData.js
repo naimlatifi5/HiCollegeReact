@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useDebugValue } from 'react'
+import { useEffect, useState, useDebugValue } from 'react'
 import axios from 'axios'
 export const fetchData = (url) => {
   // useDebugValue is used on custom hooks to debug a label on dev-tools

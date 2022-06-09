@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { CounterContext } from '../provider/CounterContext'
+
 const CounterButtonWithContext = () => {
   const [numberOfClicks, increment, incrementBy, setIncrementBy] = useContext(
     CounterContext,
@@ -7,7 +8,6 @@ const CounterButtonWithContext = () => {
   return (
     <>
       <p>You have clicked the button {numberOfClicks} times</p>
-
       <label htmlFor="number">Incremebt by:</label>
       <input
         name="number"

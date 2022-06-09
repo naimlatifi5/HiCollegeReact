@@ -1,21 +1,21 @@
-import React, { useState, useMemo } from "react";
+import React, { useState } from 'react'
 
 const App = () => {
-  const [text, setText] = useState("");
-  const [dark, setDark] = useState(false);
+  const [text, setText] = useState('')
+  const [dark, setDark] = useState(false)
 
   const themeStyle = {
-    backgroundColor: dark ? "black" : "white",
-    color: dark ? "white" : "black",
-  };
+    backgroundColor: dark ? 'black' : 'white',
+    color: dark ? 'white' : 'black',
+  }
 
   const handleTheme = () => {
-    setDark(!dark);
-  };
+    setDark(!dark)
+  }
 
   const onChange = (e) => {
-    setText(e.target.value);
-  };
+    setText(e.target.value)
+  }
 
   return (
     <div style={themeStyle}>
@@ -24,17 +24,17 @@ const App = () => {
       <ChildComponent text={text} />
       <button onClick={handleTheme}>Change Theme</button>
     </div>
-  );
-};
+  )
+}
 
 const ChildComponent = ({ text }) => {
   const alterText = (words) => {
-    console.log("this is triggered");
-    return `I like ${words}`;
-  };
+    console.log('this is triggered')
+    return `I like ${words}`
+  }
   // write your magic below this line :) feel free to alter the code blow
 
-  return <p>{alterText(text)}</p>;
-};
+  return <p>{alterText(text)}</p>
+}
 
-export default App;
+export default App

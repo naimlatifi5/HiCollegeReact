@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from 'react'
 
 const Challenge6 = () => {
   return (
@@ -10,7 +10,7 @@ const Challenge6 = () => {
         previous values of "isFocused" state.
       </h1>
     </div>
-  );
-};
+  )
+}
 
-export default Challenge6;
+export default Challenge6

@@ -12,7 +12,7 @@ function fetchUser() {
   })
 }
 
-const asyncComponent = () => {
+const AsyncUseEffect = () => {
   let [id, setId] = useState('loading...')
   let [name, setName] = useState('loading...')
   let [lastName, setLastName] = useState('loading...')
@@ -39,4 +39,4 @@ const asyncComponent = () => {
   )
 }
 
-export default asyncComponent
+export default AsyncUseEffect
