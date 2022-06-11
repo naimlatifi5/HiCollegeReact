@@ -11,6 +11,7 @@ import UseDebugValue from './UseDebugValue'
 import CounterButtonWithContext from './useContext/components/CounterButtonWithContext.js'
 import { CounterProvider } from './useContext/provider/CounterProvider.js'
 import CartUpdates from './useContext/components/CartUpdates.js'
+import UseCallBack from './useCallback/UseCallback'
 export default function Main() {
   return (
     <div>
@@ -56,6 +57,13 @@ export default function Main() {
       <br />
       <hr />
       <h2>Use debug value hook</h2>
+      <br />
+      <br />
+      <hr />
+      <UseCallBack></UseCallBack>
+      <br />
+      <br />
+      <hr />
       <UseDebugValue />
       <br />
       <br />
