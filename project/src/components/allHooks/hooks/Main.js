@@ -60,6 +60,7 @@ export default function Main() {
       <br />
       <br />
       <hr />
+      <h2>Use callback hook</h2>
       <UseCallBack></UseCallBack>
       <br />
       <br />
