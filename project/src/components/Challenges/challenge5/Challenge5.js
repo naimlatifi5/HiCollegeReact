@@ -10,7 +10,7 @@ const Challenge5 = () => {
       </h1>
       <br />
       <br></br>
-      {/* write your code below this line - HINT: import uncommented Header and Page components below this line */}
+      {/* write your code below this line  */}
     </div>
   )
 }
