@@ -14,7 +14,7 @@ const UseLayoutEffectHook = () => {
     console.log('rendered')
     inputRef.current.value = 'hello'
   }, [])
-
+  // order of useEffect matters but now we will take example with useLayoutEffect and se how this is rendered before components is rendered
   useEffect(() => {
     console.log('==== USE FIRST EFFECT RENDERED ==== ')
   })
