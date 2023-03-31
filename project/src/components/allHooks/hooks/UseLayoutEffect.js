@@ -1,49 +1,53 @@
-import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 const UseLayoutEffectHook = () => {
-  const inputRef = useRef(0)
-  const button = useRef()
-  const divWrapper = useRef()
+  const inputRef = useRef(0);
+  const button = useRef();
+  const divWrapper = useRef();
 
   useLayoutEffect(() => {
-    console.log('Layout effect')
-    console.log('value:', inputRef.current.value)
-  }, [])
+    console.log("Layout effect");
+    console.log("value:", inputRef.current.value);
+  }, []);
 
   useEffect(() => {
-    console.log('rendered')
-    inputRef.current.value = 'hello'
-  }, [])
+    console.log("rendered");
+    inputRef.current.value = "hello";
+  }, []);
   // order of useEffect matters but now we will take example with useLayoutEffect and se how this is rendered before components is rendered
   useEffect(() => {
-    console.log('==== USE FIRST EFFECT RENDERED ==== ')
-  })
+    console.log("==== USE FIRST EFFECT RENDERED ==== ");
+  });
   useEffect(() => {
-    console.log('==== USE SECOND EFFECT RENDERED ==== ')
-  })
+    console.log("==== USE SECOND EFFECT RENDERED ==== ");
+  });
 
   useEffect(() => {
-    console.log('==== USE EFFECT RENDERED === ')
-  })
+    console.log("==== USE EFFECT RENDERED === ");
+  });
 
   // IT IS TRIGGERED SYNCHRONOUSLY BEFORE DOM IS ON PLACE COMPARED TO USEFFECT IT IS CALLED AFTER DOM IS ON PLACE
   useLayoutEffect(() => {
-    console.log('=== USE LAYOUT EFFECT RENDERED === ')
-  })
+    console.log("=== USE LAYOUT EFFECT RENDERED === ");
+  });
 
   // example with useEffect and useLayoutEffect
-  const [toggle, setToggle] = useState(false)
+  const [toggle, setToggle] = useState(false);
+
   const handleClick = () => {
-    setToggle((prev) => !prev)
-  }
+    setToggle((prev) => !prev);
+  };
   // with useEffect div will flicker a little bit since it is called after DOM is painted
   useEffect(() => {
-    if (button == null || divWrapper == null) return
-    const { bottom } = button.current.getBoundingClientRect()
-    if (divWrapper.current) {
-      divWrapper.current.style.top = `${bottom + 100}px`
+    if (button == null || divWrapper == null) {
+      return;
     }
-  }, [toggle])
+
+    const { bottom } = button.current.getBoundingClientRect();
+    if (divWrapper.current) {
+      divWrapper.current.style.top = `${bottom + 100}px`;
+    }
+  }, [toggle]);
 
   // with useLayout the div will not jump as with the useEffect since useLayout is synchronoused and where the DOM is painted. UseEffect is asynchronous and it is called after DOM is painted
 
@@ -64,7 +68,7 @@ const UseLayoutEffectHook = () => {
       </button>
       {toggle && (
         <div
-          style={{ position: 'absolute', width: '100%', background: 'red' }}
+          style={{ position: "absolute", width: "100%", background: "red" }}
           ref={divWrapper}
         >
           This is my div to toggle
@@ -75,7 +79,7 @@ const UseLayoutEffectHook = () => {
       <br />
       <br />
     </>
-  )
-}
+  );
+};
 
-export default UseLayoutEffectHook
+export default UseLayoutEffectHook;
