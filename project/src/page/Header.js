@@ -30,10 +30,7 @@ const Header = () => (
           </Link>
         </li>
         <li>
-          <Link to="/hooks">Hooks</Link>
-        </li>
-        <li>
-          <Link to="/challenges">Challenges</Link>
+          <Link to="/useEffect">UseEffect hook</Link>
         </li>
         <li>
           <Link to="/hooks10">All 10 hooks</Link>
