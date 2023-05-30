@@ -10,7 +10,7 @@ import EventsForms from "../components/EventsForms/Main";
 import Challenge from "../components/Challenges/Main";
 import Hooks10 from "../components/hooks/Main";
 import UseEffectHook from "../components/hooks/useEffect/Main";
-
+import useLayoutEffect from "../components/hooks/UseLayoutEffect";
 // The Main component renders one of the three provided
 // Routes (provided that one matches)
 const Main = () => (
@@ -28,6 +28,7 @@ const Main = () => (
 			/>
 			<Route path="/challenges" component={Challenge} />
 			<Route path="/useEffect" component={UseEffectHook} />
+			<Route path="/useLayoutEffect" component={useLayoutEffect} />
 			<Route path="/Hooks10" component={Hooks10} />
 		</Switch>
 	</main>

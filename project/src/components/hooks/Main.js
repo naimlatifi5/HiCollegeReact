@@ -1,7 +1,7 @@
 import React from "react";
 import UseStateHook from "./UseState";
 import UseRefHook from "./UseRef";
-import UseLayoutEffect from "./UseLayoutEffect";
+
 import UseImperativeHandle from "./UseImperativeHandle";
 import UseMemo from "./UseMemo";
 import UseReducer from "./UseReducer";
@@ -31,8 +31,7 @@ export default function Main() {
 			<br />
 			<br />
 			<hr />
-			<h2>Use Layout effect hook</h2>
-			<UseLayoutEffect />
+
 			<br />
 			<br />
 			<hr />
