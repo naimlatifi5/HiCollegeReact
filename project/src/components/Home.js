@@ -6,7 +6,7 @@ class Home extends Component {
     return (
       <>
         <img src={logo} className="App-logo" alt="logo" />
-        <h1>Welcome to HIQ React course</h1>
+        <h1>Welcome HICollege React course</h1>
       </>
     )
   }

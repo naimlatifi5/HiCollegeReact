@@ -1,33 +1,35 @@
-import React from 'react'
-import UseStateHook from './UseState'
-import UseEffect from './useEffect/UseEffect'
-import AsyncUseEffect from './useEffect/AsyncUseEffect'
-import UseRefHook from './UseRef'
-import UseLayoutEffect from './UseLayoutEffect'
-import UseImperativeHandle from './UseImperativeHandle'
-import UseMemo from './UseMemo'
-import UseReducer from './UseReducer'
-import UseDebugValue from './UseDebugValue'
-import CounterButtonWithContext from './useContext/components/CounterButtonWithContext.js'
-import { CounterProvider } from './useContext/provider/CounterProvider.js'
-import CartUpdates from './useContext/components/CartUpdates.js'
-import UseCallBack from './useCallback/UseCallback'
+import React from "react";
+import UseStateHook from "./UseState";
+import UseEffect from "./useEffect/UseEffect";
+import AsyncUseEffect from "./useEffect/AsyncUseEffect";
+import UseRefHook from "./UseRef";
+import UseLayoutEffect from "./UseLayoutEffect";
+import UseImperativeHandle from "./UseImperativeHandle";
+import UseMemo from "./UseMemo";
+import UseReducer from "./UseReducer";
+import UseDebugValue from "./UseDebugValue";
+import CounterButtonWithContext from "./useContext/components/CounterButtonWithContext.js";
+import { CounterProvider } from "./useContext/provider/CounterProvider.js";
+import CartUpdates from "./useContext/components/CartUpdates.js";
+import UseCallBack from "./useCallback/UseCallback";
 export default function Main() {
   return (
     <div>
       <br />
-      <h2>Use state hook</h2>
       <br />
-      <UseStateHook />
-      <br />
-      <br />
-      <hr />
       <h2>Use effect hook</h2>
       <UseEffect />
       <br />
       <br />
       <h2>Use effect hook with async </h2>
-      <AsyncUseEffect></AsyncUseEffect>
+      <AsyncUseEffect />
+      <br />
+      <br />
+      <hr />
+      <br />
+      <h2>Use state hook</h2>
+      <br />
+      <UseStateHook />
       <br />
       <br />
       <hr />
@@ -61,7 +63,7 @@ export default function Main() {
       <br />
       <hr />
       <h2>Use callback hook</h2>
-      <UseCallBack></UseCallBack>
+      <UseCallBack />
       <br />
       <br />
       <hr />
@@ -75,7 +77,7 @@ export default function Main() {
         <CounterButtonWithContext />
       </CounterProvider>
     </div>
-  )
+  );
 }
 
 // Similar to componentDidMount and componentDidUpdate:

@@ -6,7 +6,7 @@ import BookListContainer from './ContainerPresentationalComponents/BookListConta
 
 const Components = () => {
   return (
-    <React.Fragment>
+    <>
       <h2>Class component</h2>
       <MyClassComponent />
       <h2>Function component</h2>
@@ -18,7 +18,7 @@ const Components = () => {
       <hr />
       <h3>Example 2</h3>
       <BookListContainer></BookListContainer>
-    </React.Fragment>
+    </>
   )
 }
 

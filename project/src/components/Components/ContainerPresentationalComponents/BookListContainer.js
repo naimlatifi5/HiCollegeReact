@@ -1,26 +1,16 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import BookList from "./BookList"
 
-class BookListContainer extends React.Component {
-  constructor() {
-    super()
-
-    this.state = {
-      books: [],
-    }
-  }
-
-  componentDidMount() {
-    fetch(
+const BookListContainer = () => {
+  const [books, setBooks] = useState([])
+  useEffect(() => {
+     fetch(
       "https://learn-co-curriculum.github.io/books-json-example-api/books.json"
     )
       .then((response) => response.json())
-      .then((bookData) => this.setState({ books: bookData.books }))
-  }
-
-  render() {
-    return <BookList books={this.state.books} />
-  }
+      .then((bookData) => setBooks( bookData.books ))
+  })
+  return <BookList books={books} />
 }
 
 export default BookListContainer

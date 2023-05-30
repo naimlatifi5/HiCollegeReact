@@ -4,14 +4,24 @@ const UseEffect = () => {
   const [name, setName] = useState("Superman");
   const [strongestVersions, setStrongestVersions] = useState("Supermen prime");
 
+  // Similar to componentDidMount and componentDidUpdate:
+  // useEffect(() => {
+  //   document.title = name;
+  // }, []);
+  // re-trigger only once with empty []
+
+  // retrigger whenever property has changed
   useEffect(() => {
-    console.log(`Name: ${name}`);
+    document.title = name;
   }, [name]);
 
   useEffect(() => {
     console.log(`Strongest versions: ${strongestVersions}`);
   }, [strongestVersions]);
 
+  const handleChangeName = (e) => {
+    setName(e.target.value);
+  };
   return (
     <>
       Name is: {name} and strongest versions:- {strongestVersions}
@@ -22,6 +32,7 @@ const UseEffect = () => {
       <button type="button" onClick={() => setStrongestVersions("All start!")}>
         Update versions
       </button>
+      <input type="text" value={name} onChange={handleChangeName} />
     </>
   );
 };
