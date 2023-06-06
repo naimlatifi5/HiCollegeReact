@@ -7,10 +7,13 @@ import Components from "../components/Components/Main";
 import Props from "../components/Props/Main";
 import State from "../components/State/Main";
 import EventsForms from "../components/EventsForms/Main";
-import Challenge from "../components/Challenges/Main";
-import Hooks10 from "../components/hooks/Main";
 import UseEffectHook from "../components/hooks/useEffect/Main";
 import useLayoutEffect from "../components/hooks/UseLayoutEffect";
+import UseRef from "../components/hooks/UseRef";
+import useMemoHook from "../components/hooks/UseMemo";
+import useCallback from "../components/hooks/useCallback/UseCallback";
+import useReducer from "../components/hooks/UseReducer";
+import useContext from "../components/hooks/UseContext";
 // The Main component renders one of the three provided
 // Routes (provided that one matches)
 const Main = () => (
@@ -26,10 +29,13 @@ const Main = () => (
 				path="/listConditionRendering"
 				component={ListConditionalRendering}
 			/>
-			<Route path="/challenges" component={Challenge} />
 			<Route path="/useEffect" component={UseEffectHook} />
+			<Route path="/useRef" component={UseRef} />
 			<Route path="/useLayoutEffect" component={useLayoutEffect} />
-			<Route path="/Hooks10" component={Hooks10} />
+			<Route path="/useMemo" component={useMemoHook} />
+			<Route path="/useCallback" component={useCallback} />
+			<Route path="/useReducer" component={useReducer} />
+			<Route path="/useContext" component={useContext} />
 		</Switch>
 	</main>
 );

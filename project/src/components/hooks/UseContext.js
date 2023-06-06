@@ -1,7 +1,19 @@
-import React from 'react'
+import React from "react";
+import { CounterProvider } from "./useContext/provider/CounterProvider";
+import CartUpdates from "./useContext/components/CartUpdates";
+import CounterButtonWithContext from "./useContext/components/CounterButtonWithContext";
 
 const UseContext = () => {
-  return <div>UseContext</div>
-}
+	return (
+		<>
+			<h1>UseContext hook</h1>
 
-export default UseContext
+			<CounterProvider>
+				<CartUpdates />
+				<CounterButtonWithContext />
+			</CounterProvider>
+		</>
+	);
+};
+
+export default UseContext;

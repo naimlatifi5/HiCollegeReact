@@ -33,13 +33,22 @@ const Header = () => (
 					<Link to="/useEffect">UseEffect hook</Link>
 				</li>
 				<li>
-					<Link to="/useLayoutEffect">useRef hook</Link>
+					<Link to="/useRef">useRef hook</Link>
 				</li>
 				<li>
 					<Link to="/useLayoutEffect">useLayoutEffect hook</Link>
 				</li>
 				<li>
-					<Link to="/hooks10">All 10 hooks</Link>
+					<Link to="/useMemo">useMemo hook</Link>
+				</li>
+				<li>
+					<Link to="/useCallback">useCallback hook</Link>
+				</li>
+				<li>
+					<Link to="/useReducer">useReducer hook</Link>
+				</li>
+				<li>
+					<Link to="/useContext">useContext hook</Link>
 				</li>
 			</ul>
 		</nav>
