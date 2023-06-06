@@ -1,23 +1,26 @@
 .nav {
-  margin-bottom: 25px;
-  background-color: #333333;
-  width: 100%;
+	margin-bottom: 25px;
+	background-color: #333333;
+	width: 100%;
 }
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	flex-wrap: wrap;
+	display: flex;
+	justify-content: flex-start;
 }
 
 li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 9px;
-  text-decoration: none;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 9px;
+	text-decoration: none;
 }
 
 li a:hover {
-  background-color: #111111;
+	background-color: #111111;
 }

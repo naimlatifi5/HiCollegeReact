@@ -30,6 +30,9 @@ const Header = () => (
 					</Link>
 				</li>
 				<li>
+					<Link to="/useState">useState hook</Link>
+				</li>
+				<li>
 					<Link to="/useEffect">UseEffect hook</Link>
 				</li>
 				<li>
@@ -49,6 +52,9 @@ const Header = () => (
 				</li>
 				<li>
 					<Link to="/useContext">useContext hook</Link>
+				</li>
+				<li>
+					<Link to="/useDebugValue">useDebugValue hook</Link>
 				</li>
 			</ul>
 		</nav>

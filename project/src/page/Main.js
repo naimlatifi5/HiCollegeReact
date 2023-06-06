@@ -7,6 +7,7 @@ import Components from "../components/Components/Main";
 import Props from "../components/Props/Main";
 import State from "../components/State/Main";
 import EventsForms from "../components/EventsForms/Main";
+import useState from "../components/hooks/UseState";
 import UseEffectHook from "../components/hooks/useEffect/Main";
 import useLayoutEffect from "../components/hooks/UseLayoutEffect";
 import UseRef from "../components/hooks/UseRef";
@@ -14,6 +15,7 @@ import useMemoHook from "../components/hooks/UseMemo";
 import useCallback from "../components/hooks/useCallback/UseCallback";
 import useReducer from "../components/hooks/UseReducer";
 import useContext from "../components/hooks/UseContext";
+import useDebugValue from "../components/hooks/UseDebugValue";
 // The Main component renders one of the three provided
 // Routes (provided that one matches)
 const Main = () => (
@@ -29,6 +31,7 @@ const Main = () => (
 				path="/listConditionRendering"
 				component={ListConditionalRendering}
 			/>
+			<Route path="/useState" component={useState} />
 			<Route path="/useEffect" component={UseEffectHook} />
 			<Route path="/useRef" component={UseRef} />
 			<Route path="/useLayoutEffect" component={useLayoutEffect} />
@@ -36,6 +39,7 @@ const Main = () => (
 			<Route path="/useCallback" component={useCallback} />
 			<Route path="/useReducer" component={useReducer} />
 			<Route path="/useContext" component={useContext} />
+			<Route path="/useDebugValue" component={useDebugValue} />
 		</Switch>
 	</main>
 );
