@@ -1,8 +1,10 @@
 import React, { useState, useCallback } from "react";
+import ParentComponent from "./ParentChildUseCallback/Parent";
 // we save unique function values here
 const functionsSet = new Set();
 const functionsSetWithCallback = new Set();
-const UseCallback = () => {
+
+const UseCallbackComponent = () => {
 	const [count, setCount] = useState(0);
 	const [number, setNumber] = useState(0);
 	const [countWithCallback, setCountWithCallback] = useState(0);
@@ -70,6 +72,10 @@ const UseCallback = () => {
 	return (
 		<>
 			<h1>UseCallback hook</h1>
+			<hr />
+			<ParentComponent />
+			<hr />
+			<br />
 			Count: {count}
 			<br />
 			<button onClick={incrementCounter}>Increase counter</button>
@@ -84,7 +90,7 @@ const UseCallback = () => {
 				Increase counter with -cached
 			</button>
 			<button onClick={decrementCounterCached}>
-				Decrease Counter - cached{" "}
+				Decrease Counter - cached
 			</button>
 			<br />
 			<br />
@@ -94,4 +100,4 @@ const UseCallback = () => {
 		</>
 	);
 };
-export default UseCallback;
+export default UseCallbackComponent;
