@@ -4,7 +4,7 @@ class Main extends Component {
   render() {
     return (
     <React.Fragment>
-     <JSX></JSX>
+     <JSX /> 
     </React.Fragment>
    )
   }

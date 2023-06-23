@@ -1,5 +1,4 @@
 import React from 'react'
-// list rendering
 
 const UserLoggedIn = ({ name }) => {
   return <h1>Welcome back {name} </h1>

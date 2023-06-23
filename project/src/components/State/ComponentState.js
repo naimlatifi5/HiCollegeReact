@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-// state only can be used within class Component and cannot be used with function component: (UPDATED) but not anymore we can use hooks with new version of react to have state
 // state in React are immutable - do not change directly but change should be made with setState.
 // state are kind of like props but state is private property of the component and is controlled only by that component.
 

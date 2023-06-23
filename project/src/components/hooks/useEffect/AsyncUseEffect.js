@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Promise } from 'bluebird'
 Promise.config({ cancellation: true })
 
-function fetchUser() {
+const fetchUser = () => {
   return new Promise((resolve) => {
     console.count('Fetching user....')
     setTimeout(() => {

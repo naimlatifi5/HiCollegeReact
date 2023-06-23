@@ -4,7 +4,7 @@ const UseEffect = () => {
   const [name, setName] = useState("Superman");
   const [strongestVersions, setStrongestVersions] = useState("Supermen prime");
 
-  // Similar to componentDidMount and componentDidUpdate:
+  // Similar to componentDidMount and componentDidUpdate in class components
   // useEffect(() => {
   //   document.title = name;
   // }, []);

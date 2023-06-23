@@ -1,8 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
 import ComponentState from './ComponentState'
 import BuyProduct from './BuyProduct'
-class MainState extends Component {
-  render() {
+const MainState = () => {
     return (
       <div className="product-wrapper">
         <ComponentState></ComponentState>
@@ -10,7 +9,6 @@ class MainState extends Component {
         <BuyProduct></BuyProduct>
       </div>
     )
-  }
 }
 
 export default MainState
