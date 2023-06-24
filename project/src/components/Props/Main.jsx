@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ClassComponentProps from './ClassComponentProps'
-import blockData from './data/Data'
+import blockData from "./mock/data/Data.js";
 import FunctionComponentProps from './FunctionComponentProps'
 class Props extends Component {
   render() {

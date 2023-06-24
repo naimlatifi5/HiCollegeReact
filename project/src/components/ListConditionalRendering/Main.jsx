@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import data from './data/comments'
+import data from "./mock/data/comments";
 import Comments from './Comments'
 import ConditionalRendering from './ConditionalRendering'
 
