@@ -10,6 +10,33 @@
 - ### Form, lists and conditional rendering
 - ### Containers and functional components
 - ### A basic introduction to hooks
+
+  ### useState
+
+  ### useEffect
+
+  ### useRef
+
+  ### useLayoutEffect
+
+  ### useMemo
+
+  ### useCallback
+
+  ### useContext
+
+  ### useDebugValue
+
+  ### useReducer
+
+  ### useImperativeHandle
+
+  ### userId
+
+  ### useTransition
+
+  ### useInsertionEffect
+
 - ### Code challenges & code blocks
 
 ## Available Scripts

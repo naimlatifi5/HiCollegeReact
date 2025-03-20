@@ -1,63 +1,67 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => (
   <header>
-    <nav className="nav">
+    <nav className='nav'>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <Link to='/'>Home</Link>
+        </li>
+        {/* <li>
+          <Link to='/jsx'>JSX</Link>
         </li>
         <li>
-          <Link to="/jsx">JSX</Link>
+          <Link to='/components'>Components</Link>
         </li>
         <li>
-          <Link to="/components">Components</Link>
-        </li>
-        <li>
-          <Link to="/state">State</Link>
+          <Link to='/state'>State</Link>
         </li>
 
         <li>
-          <Link to="/props">Props</Link>
+          <Link to='/props'>Props</Link>
         </li>
         <li>
-          <Link to="/eventsForms">Events & Forms</Link>
+          <Link to='/eventsForms'>Events & Forms</Link>
         </li>
         <li>
-          <Link to="/listConditionRendering">
-            Lists & conditional rendering
-          </Link>
+          <Link to='/listConditionRendering'>Lists & conditional rendering</Link>
+        </li> */}
+        <li>
+          <Link to='/useState'>useState hook</Link>
         </li>
         <li>
-          <Link to="/useState">useState hook</Link>
+          <Link to='/useEffect'>UseEffect hook</Link>
         </li>
         <li>
-          <Link to="/useEffect">UseEffect hook</Link>
+          <Link to='/useRef'>useRef hook</Link>
         </li>
         <li>
-          <Link to="/useRef">useRef hook</Link>
+          <Link to='/useLayoutEffect'>useLayoutEffect hook</Link>
         </li>
         <li>
-          <Link to="/useLayoutEffect">useLayoutEffect hook</Link>
+          <Link to='/useMemo'>useMemo hook</Link>
         </li>
         <li>
-          <Link to="/useMemo">useMemo hook</Link>
+          <Link to='/useCallback'>useCallback hook</Link>
         </li>
         <li>
-          <Link to="/useCallback">useCallback hook</Link>
+          <Link to='/useReducer'>useReducer hook</Link>
         </li>
         <li>
-          <Link to="/useReducer">useReducer hook</Link>
+          <Link to='/useContext'>useContext hook</Link>
         </li>
         <li>
-          <Link to="/useContext">useContext hook</Link>
+          <Link to='/imperativeHandler'>useImperativeHandle hook</Link>
         </li>
         <li>
-          <Link to="/imperativeHandler">useImperativeHandle hook</Link>
+          <Link to='/useDebugValue'>useDebugValue hook</Link>
         </li>
         <li>
-          <Link to="/useDebugValue">useDebugValue hook</Link>
+          <Link to='/useId'>UseId hook</Link>
+        </li>
+        <li>
+          <Link to='/useTransition'>useTransition hook</Link>
         </li>
       </ul>
     </nav>

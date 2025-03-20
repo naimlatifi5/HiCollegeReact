@@ -3,18 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "axios": "^0.26.1",
-    "bootstrap": "^4.6.0",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
-    "react-router-dom": "^4.3.1"
+    "axios": "^1.8.4",
+    "bootstrap": "^5.3.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.5.1"
   },
   "devDependencies": {
-    "@types/react": "^18.2.14",
-    "react-scripts": "2.1.1"
+    "@types/react": "^19.1.2",
+    "react-scripts": "5.0.1"
   },
   "scripts": {
-    "start": "react-scripts --openssl-legacy-provider start",
+    "dev": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
