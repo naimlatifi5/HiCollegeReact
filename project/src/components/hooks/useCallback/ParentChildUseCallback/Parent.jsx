@@ -1,16 +1,17 @@
-import React, { useState, useCallback } from "react";
-import ChildComponent from "./Child";
+import React, { useState, useCallback } from 'react';
+import ChildComponent from './Child';
 
 const ParentComponent = () => {
   const [num, setNum] = useState(0);
   const [toggle, setToggle] = useState(false);
   // uncomment to see how addByFive is running every time we toggle
   // const addByFive = () => {
-  //   console.log("I was running!");
+  //   console.log('I am running!');
   //   return num + 5;
   // };
 
   const addByFive = useCallback(() => {
+    console.log('am I running then!');
     return num + 5;
   }, [num]);
 
@@ -21,8 +22,7 @@ const ParentComponent = () => {
       <button
         onClick={() => {
           setNum(num + 5);
-        }}
-      >
+        }}>
         Update Number
       </button>
       <br />
@@ -32,9 +32,8 @@ const ParentComponent = () => {
       <br />
       <button
         onClick={() => {
-          setToggle(toggle => !toggle);
-        }}
-      >
+          setToggle((toggle) => !toggle);
+        }}>
         Toggle the light
       </button>
       <br />

@@ -17,7 +17,9 @@ const UseId = () => {
   return (
     <div>
       <h1>UseId</h1>
+      <h2>Component 1</h2>
       <PasswordField />
+      <h2>Component 2</h2>
       <PasswordField />
     </div>
   );
