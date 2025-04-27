@@ -19,6 +19,12 @@ import UseDebugValue from '../components/hooks/UseDebugValue';
 import UseImperativeHandle from '../components/hooks/UseImperativeHandle';
 import UseId from '../components/hooks/UseId';
 import UseTransition from '../components/hooks/UseTransition';
+import UseDeferredValue from '../components/hooks/UseDeferredValue';
+import UseOptimistic from '../components/hooks/othersHook/UseOptimistic';
+import UseActionState from '../components/hooks/othersHook/UseActionState';
+import UseSyncExternalStore from '../components/hooks/othersHook/UseSyncExternalStore';
+import UseInsertionEffect from '../components/hooks/othersHook/UseInsertionEffect';
+
 // The Main component renders one of the three provided
 // Routes (provided that one matches)
 const Main = () => (
@@ -43,6 +49,11 @@ const Main = () => (
       <Route path='/useDebugValue' element={<UseDebugValue />} />
       <Route path='/useId' element={<UseId />} />
       <Route path='/useTransition' element={<UseTransition />} />
+      <Route path='/useDeferredValue' element={<UseDeferredValue />} />
+      <Route path='/useOptimistic' element={<UseOptimistic />} />
+      <Route path='/useActionState' element={<UseActionState />} />
+      <Route path='/useSyncExternalStore' element={<UseSyncExternalStore />} />
+      <Route path='/useInsertionEffect' element={<UseInsertionEffect />} />
     </Routes>
   </main>
 );

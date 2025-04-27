@@ -31,13 +31,19 @@ const Header = () => (
           <Link to='/useState'>useState hook</Link>
         </li>
         <li>
+          <Link to='/useReducer'>useReducer hook</Link>
+        </li>
+        <li>
           <Link to='/useEffect'>UseEffect hook</Link>
+        </li>
+        <li>
+          <Link to='/useLayoutEffect'>useLayoutEffect hook</Link>
         </li>
         <li>
           <Link to='/useRef'>useRef hook</Link>
         </li>
         <li>
-          <Link to='/useLayoutEffect'>useLayoutEffect hook</Link>
+          <Link to='/imperativeHandler'>useImperativeHandle hook</Link>
         </li>
         <li>
           <Link to='/useMemo'>useMemo hook</Link>
@@ -46,13 +52,7 @@ const Header = () => (
           <Link to='/useCallback'>useCallback hook</Link>
         </li>
         <li>
-          <Link to='/useReducer'>useReducer hook</Link>
-        </li>
-        <li>
           <Link to='/useContext'>useContext hook</Link>
-        </li>
-        <li>
-          <Link to='/imperativeHandler'>useImperativeHandle hook</Link>
         </li>
         <li>
           <Link to='/useDebugValue'>useDebugValue hook</Link>
@@ -62,6 +62,21 @@ const Header = () => (
         </li>
         <li>
           <Link to='/useTransition'>useTransition hook</Link>
+        </li>
+        <li>
+          <Link to='/useOptimistic'>useOptimistic hook</Link>
+        </li>
+        <li>
+          <Link to='/useDeferredValue'>useDeferredValue hook</Link>
+        </li>
+        <li>
+          <Link to='/useInsertionEffect'>useInsertionEffect hook</Link>
+        </li>
+        <li>
+          <Link to='/useSyncExternalStore'>useSyncExternalStore hook</Link>
+        </li>
+        <li>
+          <Link to='/useActionState'>useActionState hook</Link>
         </li>
       </ul>
     </nav>

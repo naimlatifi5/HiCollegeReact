@@ -1,7 +1,7 @@
-import React from "react";
-import UseEffect from "./UseEffect";
-import AsyncUseEffect from "./AsyncUseEffect";
-import UseEffectWithObjectDependencies from "./useEffectObjectDependencies";
+import React from 'react';
+import UseEffect from './UseEffect';
+import AsyncUseEffect from './AsyncUseEffect.jsx';
+import UseEffectWithObjectDependencies from './useEffectObjectDependencies';
 
 const Main = () => {
   return (
