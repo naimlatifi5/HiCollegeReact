@@ -1,48 +1,44 @@
 import React, { useState, useTransition } from 'react';
 
 const UseTransition = () => {
-  const [name, setName] = useState('');
-  const [nameTransition, setNameTransition] = useState('');
-  const [lists, setLists] = useState([]);
   const [isPending, startTransition] = useTransition();
-  const LIST_SIZE = 20000;
+  const [data, setData] = useState(null);
+  const [counter, setCounter] = useState(1);
 
-  const handleChange = e => {
-    setName(e.target.value);
-    const newList = [];
-    // Simulate a heavy computation
-    for (let i = 0; i < LIST_SIZE; i++) {
-      newList.push(e.target.value);
+  const fetchData = async () => {
+    // Simulate an API call
+    try {
+      const response = await fetch(`https://jsonplaceholder.typicode.com/todos/${counter}`);
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      const result = await response.json();
+      setData(result);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+      return;
     }
-    setLists(newList);
   };
 
-  const handleChangeWithTransition = e => {
-    setNameTransition(e.target.value);
-    const newList = [];
-    for (let i = 0; i < LIST_SIZE; i++) {
-      newList.push(e.target.value);
-    }
+  const handleButtonClick = () => {
     startTransition(() => {
-      setLists(newList);
+      fetchData(); // Mark this as a transition
     });
+    setCounter((prev) => prev + 1);
   };
 
   return (
     <>
       <h1>UseTransition hook</h1>
-
-      <input type='text' value={name} onChange={handleChange} />
-      <h2>UseTransition to show loading state</h2>
-      <input type='text' value={nameTransition} onChange={handleChangeWithTransition} />
+      <button onClick={handleButtonClick} disabled={isPending}>
+        Fetch Data
+      </button>
       {isPending ? (
         <p>Loading...</p>
       ) : (
-        <ul>
-          {lists.map((item, index) => (
-            <li key={index}>{item}</li>
-          ))}
-        </ul>
+        <>
+          <p>{data?.title}</p>
+        </>
       )}
     </>
   );

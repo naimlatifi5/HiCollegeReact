@@ -30,7 +30,7 @@ import UseInsertionEffect from '../components/hooks/othersHook/UseInsertionEffec
 const Main = () => (
   <main>
     <Routes>
-      <Route exact path='/' element={Home} />
+      <Route exact path='/' element={<Home />} />
       {/* <Route path='/jsx' element={MainJSX} />
         <Route path='/elements' element={elements} />
         <Route path='/state' element={State} />

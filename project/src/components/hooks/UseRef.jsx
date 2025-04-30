@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 
 const UseRef = () => {
   const inputElement = useRef();
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
   const [text, setText] = useState('');
   const renderCountWithRef = useRef(0);
 
@@ -25,7 +25,7 @@ const UseRef = () => {
     inputElement.current.focus();
   };
 
-  const handleInputChange = e => {
+  const handleInputChange = (e) => {
     setText(e.target.value);
   };
 
@@ -44,11 +44,11 @@ const UseRef = () => {
       <div>{text}</div>
       <input type='text' onChange={handleInputChange} />
 
-      <p>I rendered {count} times - with state</p>
+      {/* <p>I rendered {count} times - with state</p> */}
       <p>I rendered {renderCountWithRef.current} times - with ref</p>
 
       <h2>Save previous state example with refs</h2>
-      <input type='text' onChange={e => setName(e.target.value)} />
+      <input type='text' onChange={(e) => setName(e.target.value)} />
       <div>
         Name is {name} and previousName is {previousName.current}
       </div>
