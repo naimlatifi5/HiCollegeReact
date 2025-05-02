@@ -48,3 +48,7 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 1. https://medium.com/@AbidKazmi/all-react-hooks-in-one-short-4b0ed4b5a6e4
 2. https://medium.com/@piyushkashyap045/react-hooks-a-comprehensive-overview-46f640f24d6f
 3. https://react.dev/reference/react/useId#usage
+4. https://react.dev/reference/react/useInsertionEffect#usage
+5. https://medium.com/@ahsan-ali-mansoor/usetransition-hook-explained-885e87414b8
+6. https://medium.com/@lovleshpokra/react-19-how-to-use-usetransition-useoptimistic-and-useactionstatehooks-d77352c03128
+7. https://dev.to/logrocket/understanding-optimistic-ui-and-reacts-useoptimistic-hook-2ig
