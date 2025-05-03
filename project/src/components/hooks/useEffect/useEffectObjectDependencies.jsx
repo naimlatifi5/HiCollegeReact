@@ -23,7 +23,7 @@ const UseEffectWithObjectDependencies = () => {
   const memoizedObject = useMemo(() => ({ count: '1' }), []);
 
   useEffect(() => {
-    console.log('Runs only once!');
+    console.log('Runs only once!'); //✅ Good practice
   }, [memoizedObject]);
 
   return (
