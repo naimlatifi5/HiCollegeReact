@@ -2,41 +2,50 @@ import React, { useEffect, useState, useMemo } from 'react';
 import axios from 'axios';
 
 const UseMemo = () => {
-  const [comments, setComments] = useState(null);
-  const [toggle, setToggle] = useState(false);
-  const [localTime, setLocalTime] = useState(new Date().toLocaleTimeString());
+  const [count, setCount] = useState(0);
+  const [comments, setComments] = useState([]);
 
   useEffect(() => {
-    console.log('run only once');
     axios.get('https://jsonplaceholder.typicode.com/posts/1/comments').then((response) => {
       const { data } = response;
-
       setComments(data);
-      console.log(comments);
     });
-  }, [comments]);
-
-  useEffect(() => {
-    const id = setInterval(() => setLocalTime(new Date().toLocaleTimeString()), 1000);
-    return () => clearInterval(id);
   }, []);
+
   const filterComment = (comments) => {
-    console.log('filtereing comments array....');
-    return comments && comments.filter((item) => item.id === 3);
+    console.log('Filtering comments...'); // expensive operation see in console
+    return comments.filter((item) => item.id === 3);
   };
-
+  // useMemo will memoize the result of the function and only re-run it when the dependencies change
+  // in this case, it will only re-run when the comments array changes
+  // this is useful when you have a lot of data and you want to avoid re-running the function every time
   const filteredComments = useMemo(() => filterComment(comments), [comments]);
-  console.log('filteredComments', filteredComments);
-  //const filteredComments =  filterComment(comments)) // it will re run every time and is expansive
-
-  console.log('Rendering usememo component...');
+  //const filteredComments = filterComment(comments); // it will re run every time and is expansive
 
   return (
     <div>
       <h1>UseMemo</h1>
-      <button onClick={() => setToggle(!toggle)}>Toggle</button>
-      {toggle && <span>Toggle</span>}
-      {localTime}
+      <br />
+      <button onClick={() => setCount(count + 1)}>Re-render</button>
+      <p>Count: {count}</p>
+      <p>Filtered comments: {filteredComments.length}</p>
+
+      <ul>
+        {comments.map((item) => (
+          <li key={item.id}>
+            {item.name} - {item.email}
+          </li>
+        ))}
+      </ul>
+      <p>Filtered comments:</p>
+      <ul>
+        {filteredComments.map((item) => (
+          <li key={item.id}>
+            {item.name} - {item.email}
+          </li>
+        ))}
+      </ul>
+      <br />
     </div>
   );
 };

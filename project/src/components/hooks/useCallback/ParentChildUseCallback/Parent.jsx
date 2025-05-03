@@ -5,13 +5,17 @@ const ParentComponent = () => {
   const [num, setNum] = useState(0);
   const [toggle, setToggle] = useState(false);
   // uncomment to see how addByFive is running every time we toggle
+
   // const addByFive = () => {
   //   console.log('I am running!');
   //   return num + 5;
   // };
 
+  // useCallback will memoize the function and only re-create it when the dependencies change
+  // in this case, it will only re-create when the num state changes
+  // this is useful when you have a lot of data and you want to avoid re-creating the function every time
   const addByFive = useCallback(() => {
-    console.log('am I running then!');
+    console.log('I am running!');
     return num + 5;
   }, [num]);
 

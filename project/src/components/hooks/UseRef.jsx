@@ -1,14 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 const UseRef = () => {
+  // useRef returns a mutable ref object whose .current property is initialized to the passed argument (initialValue). The returned object will persist for the full lifetime of the component.
+  // useRef is like a box that can hold a value and it doesn't cause the component to re-render when the value changes
+  // useRef is used to access a DOM element directly
   const inputElement = useRef();
-  // const [count, setCount] = useState(0);
   const [text, setText] = useState('');
+  // const [count, setCount] = useState(0);
   const renderCountWithRef = useRef(0);
-
-  // we can get previous state without causing the component to render
-  const [name, setName] = useState('');
-  const previousName = useRef('hej');
 
   useEffect(() => {
     // using state to increment value
@@ -16,13 +15,9 @@ const UseRef = () => {
     renderCountWithRef.current = renderCountWithRef.current + 1;
   });
 
-  useEffect(() => {
-    console.log('I have rendered because name has changed');
-    previousName.current = name;
-  }, [name]);
-
   const handleFocusInput = () => {
     inputElement.current.focus();
+    // console.dir(inputElement.current);
   };
 
   const handleInputChange = (e) => {
@@ -46,12 +41,6 @@ const UseRef = () => {
 
       {/* <p>I rendered {count} times - with state</p> */}
       <p>I rendered {renderCountWithRef.current} times - with ref</p>
-
-      <h2>Save previous state example with refs</h2>
-      <input type='text' onChange={(e) => setName(e.target.value)} />
-      <div>
-        Name is {name} and previousName is {previousName.current}
-      </div>
     </>
   );
 };

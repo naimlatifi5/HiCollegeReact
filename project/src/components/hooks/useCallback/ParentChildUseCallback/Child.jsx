@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
-const ChildComponent = ({ someFunc }) => {
-	const [calcNum, setCalcNum] = useState(0);
+const ChildComponent = (props) => {
+  const { someFunc } = props;
+  const [calcNum, setCalcNum] = useState(0);
 
-	useEffect(() => {
-		setCalcNum(someFunc());
-	}, [someFunc]);
+  useEffect(() => {
+    setCalcNum(someFunc());
+  }, [someFunc]);
 
-	return <span> Plus five: {calcNum}</span>;
+  return <span> Plus five: {calcNum}</span>;
 };
 
 export default ChildComponent;
