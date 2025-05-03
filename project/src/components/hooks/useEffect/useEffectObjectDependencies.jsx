@@ -1,50 +1,35 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from 'react';
 
 const UseEffectWithObjectDependencies = () => {
   const [count, setCount] = useState(0);
-  const [countWithObj, setCountWithObj] = useState({
-    first: {
-      second: {
-        third: {
-          value: 0
-        }
-      }
-    }
-  });
 
   // retrigger whenever property has changed
   useEffect(() => {
-    console.log("count", count);
+    console.log('count', count);
+    // setCount((prevCount) => prevCount + 1);
   }, [count]);
 
+  // object array recreated on every render
   useEffect(() => {
-    console.log("count", countWithObj);
-  }, [countWithObj]);
+    console.log('object', { count });
+  }, [{ count }]);
 
-  let prevCount = 0;
-  let currentCount = 0;
+  useEffect(() => {
+    console.log('Runs every render!', { count });
+  }, [{ count: '1' }]); // ❌ BAD: new object every time
 
-  let prevCountWithObj = { value: 0 };
-  let currentCountWithObj = { value: 0 };
+  // we will come back to this and learn more about that but think of it as a way to memoize the object
+  // and avoid creating a new object every time
+  const memoizedObject = useMemo(() => ({ count: '1' }), []);
 
-  console.log(prevCount === currentCount);
-
-  console.log(prevCountWithObj === currentCountWithObj);
+  useEffect(() => {
+    console.log('Runs only once!');
+  }, [memoizedObject]);
 
   return (
     <>
-      <button
-        type="button"
-        onClick={() => setCount(prevCount => prevCount + 1)}
-      >
+      <button type='button' onClick={() => setCount((prevCount) => prevCount + 1)}>
         Update Me {count}
-      </button>
-
-      <button
-        type="button"
-        onClick={() => setCountWithObj({ value: countWithObj.value + 1 })}
-      >
-        Update Me object {countWithObj.value}
       </button>
     </>
   );

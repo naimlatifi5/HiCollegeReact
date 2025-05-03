@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
 const UseEffect = () => {
-  const [name, setName] = useState("Superman");
-  const [strongestVersions, setStrongestVersions] = useState("Supermen prime");
+  const [name, setName] = useState('Superman');
 
   // Similar to componentDidMount and componentDidUpdate in class components
   // useEffect(() => {
@@ -11,28 +10,36 @@ const UseEffect = () => {
   // re-trigger only once with empty []
 
   // retrigger whenever property has changed
+  // useEffect is called after every render and return undefined and you can call it at the top of the component
   useEffect(() => {
     document.title = name;
   }, [name]);
 
   useEffect(() => {
-    console.log(`Strongest versions: ${strongestVersions}`);
-  }, [strongestVersions]);
+    const handleResize = () => {
+      // Handle the event
+    };
+    window.addEventListener('resize', handleResize);
+    // Cleanup function to remove the event listener
+    // This function is called when the component unmounts or before the effect runs again
+    // to avoid memory leaks
+    // and to clean up the previous effect
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const handleChangeName = (e) => {
     setName(e.target.value);
   };
   return (
     <>
-      Name is: {name} and strongest versions:- {strongestVersions}
+      Name is: {name}
       <br />
-      <button type="button" onClick={() => setName("Superman!")}>
+      <button type='button' onClick={() => setName('Superman!')}>
         Update name
       </button>
-      <button type="button" onClick={() => setStrongestVersions("All start!")}>
-        Update versions
-      </button>
-      <input type="text" value={name} onChange={handleChangeName} />
+      <input type='text' value={name} onChange={handleChangeName} />
     </>
   );
 };

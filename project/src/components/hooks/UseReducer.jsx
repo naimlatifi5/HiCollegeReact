@@ -1,11 +1,11 @@
-import React, { useReducer } from "react";
-const initialState = { counter: 0 };
+import React, { useReducer } from 'react';
 
+const initialState = { counter: 0 };
 const counterReducer = (state, action) => {
   switch (action.type) {
-    case "INCREMENT":
+    case 'INCREMENT':
       return { counter: state.counter + 1 };
-    case "DECREMENT":
+    case 'DECREMENT':
       let negativeValue = state.counter <= 0 ? 0 : state.counter - 1;
       return { counter: negativeValue };
     default:
@@ -13,23 +13,24 @@ const counterReducer = (state, action) => {
   }
 };
 const UseReducerHook = () => {
+  // useReducer returns an array with the current state and a dispatch function
   const [state, dispatch] = useReducer(counterReducer, initialState);
 
   const handleIncrement = () => {
-    dispatch({ type: "INCREMENT" });
+    dispatch({ type: 'INCREMENT' });
   };
   const handleDecrement = () => {
-    dispatch({ type: "DECREMENT" });
+    dispatch({ type: 'DECREMENT' });
   };
   return (
     <div>
       <h1>UseReducer hook</h1>
       Counter: {state.counter}
       <br />
-      <button type="button" onClick={handleIncrement}>
+      <button type='button' onClick={handleIncrement}>
         Increment +
       </button>
-      <button type="button" onClick={handleDecrement}>
+      <button type='button' onClick={handleDecrement}>
         Decrement -
       </button>
     </div>

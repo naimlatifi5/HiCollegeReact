@@ -12,6 +12,9 @@ const Main = () => {
       <br />
       <h2>Use effect hook with async </h2>
       <AsyncUseEffect />
+      <br />
+      <br />
+      <h2>Use effect hook with object dependencies</h2>
       <UseEffectWithObjectDependencies />
     </>
   );
