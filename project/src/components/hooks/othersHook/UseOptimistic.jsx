@@ -1,49 +1,57 @@
-import React, { useOptimistic, useState, useTransition } from 'react';
-const UseOptimisticFunc = () => {
-  const [todos, setTodos] = useState([]);
-  const [isPending, startTransition] = useTransition();
-  const [optimisticTodos, setOptimisticTodos] = useState([]);
+import { useOptimistic, useState, useTransition, useRef } from 'react';
 
-  const handleAddTodo = async (newTodo) => {
-    // Add the new todo optimistically
-    setOptimisticTodos((prev) => [...prev, newTodo]);
-    startTransition(() => {
-      try {
-        fakeApiCall(newTodo)
-          .then(() => {
-            // Persist the update if the API call succeeds
-            setTodos((prevTodos) => [...prevTodos, newTodo]);
-          })
-          .catch((error) => {
-            console.error('API failed', error);
-            // Rollback the optimistic update if the API call fails
-            setOptimisticTodos((prev) => prev.filter((todo) => todo !== newTodo));
-          });
-      } catch (error) {
-        console.error('Unexpected error', error);
-      }
+const Comments = () => {
+  const [messages, setMessages] = useState([{ text: 'Hello there!', sending: false, key: 1 }]);
+  const [isPending, startTransition] = useTransition();
+  const formRef = useRef();
+
+  const formAction = (formData) => {
+    addOptimisticMessage(formData.get('message'));
+    formRef.current.reset();
+    startTransition(async () => {
+      await sendMessageAction(formData);
     });
   };
 
-  const fakeApiCall = (todo) =>
-    new Promise((resolve, reject) => {
-      setTimeout(() => {
-        Math.random() > 0.3 ? resolve() : reject(new Error('Error'));
-      }, 1000);
+  // useOptimistic is a hook that allows you to optimistically update the state of a component
+  // It takes two arguments: the current state and a function that returns the new state
+  const [optimisticMessages, addOptimisticMessage] = useOptimistic(
+    messages,
+    (state, newMessage) => [
+      {
+        text: newMessage,
+        sending: true,
+      },
+      ...state,
+    ],
+  );
+
+  const deliverMessage = async (message) => {
+    await new Promise((res) => setTimeout(res, 1000));
+    return message;
+  };
+
+  const sendMessageAction = async (formData) => {
+    const sentMessage = await deliverMessage(formData.get('message'));
+    startTransition(() => {
+      setMessages((messages) => [{ text: sentMessage }, ...messages]);
     });
+  };
 
   return (
     <>
-      <ul>
-        {optimisticTodos.map((todo, index) => (
-          <li key={index}>{todo}</li>
-        ))}
-      </ul>
-      <button onClick={() => handleAddTodo(`New Todo ${Date.now()}`)} disabled={isPending}>
-        Add
-      </button>
+      <form action={formAction} ref={formRef}>
+        <input type='text' name='message' placeholder='Hello!' />
+        <button type='submit'>Send</button>
+      </form>
+      {optimisticMessages.map((message, index) => (
+        <div key={index}>
+          {message.text}
+          {!!message.sending && <small> (Sending...)</small>}
+        </div>
+      ))}
     </>
   );
 };
 
-export default UseOptimisticFunc;
+export default Comments;

@@ -1,6 +1,9 @@
 import React, { useId } from 'react';
 
 function PasswordField() {
+  // useId is used to generate unique IDs for accessibility purposes
+  // It is useful when you have multiple components that need to be identified
+  // It is used to generate unique IDs for elements in the component
   const uniqueId = useId();
   return (
     <>

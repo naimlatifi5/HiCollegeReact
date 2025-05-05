@@ -15,9 +15,13 @@ const UseSyncExternalStore = () => {
     return navigator.onLine; // Browser API to check online status
   };
 
-  //TO demostrate offline go to network in dev tools and select offline
+  // useSyncExternalStore is a hook that allows you to subscribe to an external store and get its current value
+  // It takes two arguments: subscribe and getSnapshot
+  // subscribe is a function that takes a callback and returns an unsubscribe function
+  // getSnapshot is a function that returns the current value of the store
+
   const onlineStatus = useSyncExternalStore(subscribe, getSnapshot);
-  const isOnline = onlineStatus ? 'Online' : 'Offline';
+  const isOnline = onlineStatus ? 'Online' : 'Offline'; //TO demostrate offline go to network in dev tools and select offline
 
   return (
     <div>

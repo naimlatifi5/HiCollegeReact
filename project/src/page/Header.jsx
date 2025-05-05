@@ -64,19 +64,16 @@ const Header = () => (
           <Link to='/useTransition'>useTransition hook</Link>
         </li>
         <li>
-          <Link to='/useOptimistic'>useOptimistic hook</Link>
-        </li>
-        <li>
           <Link to='/useDeferredValue'>useDeferredValue hook</Link>
-        </li>
-        <li>
-          <Link to='/useInsertionEffect'>useInsertionEffect hook</Link>
         </li>
         <li>
           <Link to='/useSyncExternalStore'>useSyncExternalStore hook</Link>
         </li>
         <li>
           <Link to='/useActionState'>useActionState hook</Link>
+        </li>
+        <li>
+          <Link to='/useOptimistic'>useOptimistic hook</Link>
         </li>
       </ul>
     </nav>
