@@ -31,14 +31,14 @@ const UseLayoutEffectHook = () => {
     }
   }, []);
 
-  //  useEffect(() => {
-  //    const box = boxRef.current;
-  //    if (box) {
-  //      const boxWidth = box.getBoundingClientRect().width;
-  //      console.log('useEffect: Box width =', boxWidth);
-  //      setWidth(boxWidth);
-  //    }
-  //  }, []);
+  // useEffect(() => {
+  //   const box = boxRef.current;
+  //   if (box) {
+  //     const boxWidth = box.getBoundingClientRect().width;
+  //     console.log('useEffect: Box width =', boxWidth);
+  //     setWidth(boxWidth);
+  //   }
+  // }, []);
 
   // Effect: runs *after* the browser paints
   useEffect(() => {
@@ -48,6 +48,7 @@ const UseLayoutEffectHook = () => {
   return (
     <>
       <h1>UseLayoutEffect hook</h1>
+      <p>Width measured by useLayoutEffect: {width}px</p>
       <div
         ref={boxRef}
         style={{
@@ -57,7 +58,6 @@ const UseLayoutEffectHook = () => {
           marginBottom: '10px',
         }}
       />
-      <p>Width measured by useLayoutEffect: {width}px</p>
     </>
   );
 };

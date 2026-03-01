@@ -7,6 +7,7 @@ const UseTransition = () => {
   // isPending is a boolean that indicates whether the transition is in progress
   // startTransition is a function that you can call to mark an update as a transition
   const [isPending, startTransition] = useTransition();
+
   const [data, setData] = useState(null);
   const [counter, setCounter] = useState(1);
 
@@ -17,6 +18,7 @@ const UseTransition = () => {
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
+
       const result = await response.json();
       setData(result);
     } catch (error) {
@@ -32,7 +34,6 @@ const UseTransition = () => {
     setCounter((prev) => prev + 1);
   };
 
-  console.log('isPending:', isPending);
   return (
     <>
       <h1>UseTransition hook</h1>

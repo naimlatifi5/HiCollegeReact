@@ -31,6 +31,7 @@ const AsyncUseEffect = () => {
       promise.cancel();
     };
   }, []);
+
   return (
     <div className='wrapper-user'>
       <p>ID: {id}</p>

@@ -9,7 +9,7 @@ import Home from '../components/Home';
 // import EventsForms from '../components/EventsForms/Main';
 import UseState from '../components/hooks/UseState';
 import UseEffectHook from '../components/hooks/useEffect/Main';
-import UseLayoutEffect from '../components/hooks/UseLayoutEffect';
+import UseLayoutEffect from '../components/hooks/useEffect/UseLayoutEffect';
 import UseRef from '../components/hooks/UseRef';
 import UseMemoHook from '../components/hooks/UseMemo';
 import UseCallback from '../components/hooks/useCallback/UseCallback';

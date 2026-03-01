@@ -6,6 +6,7 @@ const UseRef = () => {
   // useRef is used to access a DOM element directly
   const inputElement = useRef();
   const [text, setText] = useState('');
+
   // const [count, setCount] = useState(0);
   const renderCountWithRef = useRef(0);
 
@@ -32,7 +33,7 @@ const UseRef = () => {
       <br />
       <br />
       <button type='button' onClick={handleFocusInput}>
-        Focus the input
+        Focus the inputw1
       </button>
       <br />
       <h2>Refs persist the data and doesn't render the whole component</h2>

@@ -1,8 +1,8 @@
-import React, { useContext } from 'react'
-import { CounterContext } from '../provider/CounterContext'
+import React, { useContext } from 'react';
+import { CounterContext } from '../provider/CounterContext';
 const CartUpdates = () => {
-  const [increment] = useContext(CounterContext)
-  return <div>This is my card that will update based on input: {increment}</div>
-}
+  const [numberOfClicks] = useContext(CounterContext);
+  return <div>This is my card that will update based on input: {numberOfClicks}</div>;
+};
 
-export default CartUpdates
+export default CartUpdates;
