@@ -31,7 +31,7 @@ const MyUserInfo = () => {
   return (
     <div>
       <div>{loginMessage}</div>
-      <input value={nameRef.current} onChange={(evt) => setUserName(evt.target.value)} />
+      <input value={userName} onChange={(evt) => setUserName(evt.target.value)} />
     </div>
   );
 };
