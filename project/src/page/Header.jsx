@@ -34,7 +34,7 @@ const Header = () => (
           <Link to='/useReducer'>useReducer hook</Link>
         </li>
         <li>
-          <Link to='/useEffect'>UseEffect hook</Link>
+          <Link to='/useEffect'>useEffect & useEffectEvent hook</Link>
         </li>
         <li>
           <Link to='/useLayoutEffect'>useLayoutEffect hook</Link>

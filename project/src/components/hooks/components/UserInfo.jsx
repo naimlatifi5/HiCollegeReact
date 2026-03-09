@@ -26,13 +26,14 @@ const MyUserInfo = () => {
       setLoginMessage(`${getUserName()} - Logged in for ${loggedInTime} seconds`);
     }, 1000);
     return () => clearInterval(interval);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
-    <div>
+    <>
       <div>{loginMessage}</div>
       <input value={userName} onChange={(evt) => setUserName(evt.target.value)} />
-    </div>
+    </>
   );
 };
 
