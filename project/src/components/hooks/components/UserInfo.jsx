@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useEffectEvent } from 'react';
 
 const MyUserInfo = () => {
-  const [userName, setUserName] = useState('Bob');
+  const [userName, setUserName] = useState('Superman');
   const [loginMessage, setLoginMessage] = useState('');
   const nameRef = useRef(userName); // useRef is used to store the current value of userName and it is not affected by the closure of useEffect
   nameRef.current = userName;

@@ -6,13 +6,14 @@ const UseRef = () => {
   // useRef is used to access a DOM element directly
   const inputElement = useRef();
   const [text, setText] = useState('');
+  //const [count, setCount] = useState(0);
 
   // const [count, setCount] = useState(0);
   const renderCountWithRef = useRef(0);
 
   useEffect(() => {
     // using state to increment value
-    // setCount(count + 1) // it renders and renders and renders - infinity loop common scenario with this is when you have a button and click on that to icrement state, this example is just for the porpose of showing how can you run in infinite loop with useState inside useEffect
+    //setCount(count + 1); // it renders and renders and renders - infinity loop common scenario with this is when you have a button and click on that to icrement state, this example is just for the porpose of showing how can you run in infinite loop with useState inside useEffect
     renderCountWithRef.current = renderCountWithRef.current + 1;
   });
 

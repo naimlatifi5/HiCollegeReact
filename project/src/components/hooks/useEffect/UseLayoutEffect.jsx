@@ -31,6 +31,7 @@ const UseLayoutEffectHook = () => {
     }
   }, []);
 
+  // enable this to demostrate the issue with useEffect and how it is called after the DOM is on place and it is not able to measure the width of the box before it is rendered and it is causing the flickering effect on the boxWidth
   // useEffect(() => {
   //   const box = boxRef.current;
   //   if (box) {

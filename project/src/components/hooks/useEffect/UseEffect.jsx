@@ -4,16 +4,16 @@ const UseEffect = () => {
   const [name, setName] = useState('Superman');
 
   // Similar to componentDidMount and componentDidUpdate in class components
-  // useEffect(() => {
-  //   document.title = name;
-  // }, []);
+  useEffect(() => {
+    document.title = name;
+  }, []);
   // re-trigger only once with empty []
 
   // retrigger whenever property has changed
   // useEffect is called after every render and return undefined and you can call it at the top of the component
-  useEffect(() => {
-    document.title = name;
-  }, [name]);
+  // useEffect(() => {
+  //   document.title = name;
+  // }, [name]);
 
   useEffect(() => {
     const handleResize = () => {

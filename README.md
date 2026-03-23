@@ -13,11 +13,13 @@
 
   ### useState
 
-  ### useEffect
+  ### useReducer
 
-  ### useRef
+  ### useEffect & useEfectEvent
 
   ### useLayoutEffect
+
+  ### useRef
 
   ### useMemo
 
@@ -26,8 +28,6 @@
   ### useContext
 
   ### useDebugValue
-
-  ### useReducer
 
   ### useImperativeHandle
 
